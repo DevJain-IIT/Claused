@@ -277,8 +277,17 @@ st.markdown("""
     }
     /* Hide the empty deploy bar at top-right area gap */
     [data-testid="stToolbar"] { display: none !important; }
-    header[data-testid="stHeader"] { height: 0; min-height: 0; }
-
+    header[data-testid="stHeader"] {
+        background: transparent !important;
+        height: auto !important;
+    }
+    /* Keep the sidebar expand button visible when sidebar is collapsed */
+    [data-testid="stSidebarCollapsedControl"],
+    [data-testid="collapsedControl"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
     /* Custom heading — smaller than st.title, less margin */
     h2.conv-title {
         font-size: 1.4rem !important;
