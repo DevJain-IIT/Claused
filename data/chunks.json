@@ -1,759 +1,2237 @@
 [
   {
-    "id": "cl_5_0_1_eccentricity",
+    "id": "cl_26_1_general",
     "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.0.1",
-    "page": 7,
-    "title": "Effect of eccentricity on footing dimensions",
-    "text": "When loading is eccentric with respect to the centroid of the foundation, the footing dimensions used in the bearing capacity equation must be reduced. For single eccentricity e, reduce the dimension in that direction by 2e. For double eccentricity (e_L along length, e_B along width), the effective dimensions are L' = L - 2*e_L, B' = B - 2*e_B, and effective area A' = L' * B'. These effective dimensions are then used in the bearing capacity formula and for computing area resisting load.",
-    "formula_latex": "L' = L - 2 e_L,\\quad B' = B - 2 e_B,\\quad A' = L' \\cdot B'",
-    "formula_nl_summary": "Reduce footing dimensions by twice the eccentricity in each direction to get effective dimensions for bearing capacity calculation."
-  },
-  {
-    "id": "cl_5_1_1_strip_general",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.1.1",
-    "page": 7,
-    "title": "Ultimate net bearing capacity of strip footing \u2014 general and local shear failure",
-    "text": "For a strip footing in soil with cohesion c and angle of shearing resistance phi, ultimate net bearing capacity q_d is computed as: (a) general shear failure: q_d = c*Nc + q*(Nq - 1) + 0.5*B*gamma*N_gamma; (b) local shear failure: q'_d = (2/3)*c*N'c + q*(N'q - 1) + 0.5*B*gamma*N'_gamma. Here q is effective surcharge at base level, B is footing width, gamma is bulk unit weight. Bearing capacity factors Nc, Nq, N_gamma (general) and N'c, N'q, N'_gamma (local) are read from Table 1 \u2014 for local shear, evaluate at phi' = arctan(0.67 * tan phi) and use the same table.",
-    "formula_latex": "q_d = c N_c + q(N_q - 1) + \\tfrac{1}{2} B \\gamma N_\\gamma \\quad (\\text{general shear})",
-    "formula_nl_summary": "Terzaghi-type three-term bearing capacity formula for strip footings: cohesion term + surcharge term + width term. Bearing capacity factors Nc, Nq, N_gamma depend on phi (Table 1).",
+    "code": "IS 456:2000",
+    "clause": "26.1",
+    "page": 42,
+    "title": "General — reinforcement type, bundling, earthquake detailing reference",
+    "text": "The main reinforcement in any structural member must be of a single type and grade. It is acceptable, however, to use one type or grade for the main steel and a different one for secondary reinforcement in the same member. Bars may be placed singly, in pairs in contact, or in bundles of three or four; per 26.1.1, bundled bars must be enclosed inside stirrups or ties and must be tied together so they remain grouped, and bars larger than 32 mm in diameter cannot be bundled except when they are used in columns. Per 26.1.2, where earthquake-resistant detailing is applicable, the requirements of IS 13920 (and IS 4326) must also be considered alongside this code.",
+    "formula_nl_summary": "Single grade for main steel in a member. Bundles up to 4 bars, all bundled bars enclosed in stirrups/ties; bars > 32 mm bundled only in columns. Earthquake detailing per IS 13920.",
+    "tags": [
+      "general",
+      "bundled-bar",
+      "earthquake-detailing",
+      "reinforcement-grade",
+      "detailing"
+    ],
+    "category": "rcc",
+    "status": "draft",
     "see_also": [
-      "table_1_bearing_factors"
+      "cl_26_2_1_2_bundled_bars"
     ]
   },
   {
-    "id": "cl_5_1_2_modified",
+    "id": "cl_26_2_1_development_length",
     "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.1.2",
-    "page": 8,
-    "title": "Modified bearing capacity formula \u2014 shape, depth, inclination, water table corrections",
-    "text": "The strip-footing formula in 5.1.1 is corrected for non-strip shape, embedment depth, load inclination, and water table position. The modified general-shear formula is: q_d = c*Nc*sc*dc*ic + q*(Nq-1)*sq*dq*iq + 0.5*B*gamma*N_gamma*s_gamma*d_gamma*i_gamma * W'. Local-shear form replaces (Nc, Nq, N_gamma) with (N'c, N'q, N'_gamma) and the cohesion term has a 2/3 factor. s = shape factors (Table 2), d = depth factors (5.1.2.2), i = inclination factors (5.1.2.3), W' = water-table correction (5.1.2.4).",
-    "formula_latex": "q_d = c N_c s_c d_c i_c + q(N_q-1) s_q d_q i_q + \\tfrac{1}{2} B \\gamma N_\\gamma s_\\gamma d_\\gamma i_\\gamma W'",
-    "formula_nl_summary": "Full bearing capacity formula combining strip-footing equation with shape, depth, inclination, and water-table corrections.",
+    "code": "IS 456:2000",
+    "clause": "26.2.1",
+    "page": 42,
+    "title": "Development length of bars",
+    "text": "Per 26.2 (intro), the calculated tension or compression in any bar at any section must be developed on each side of that section by an adequate development length, end anchorage, or a combination. The development length L_d is given by L_d = (φ · σ_s) / (4 · τ_bd), where φ is the nominal bar diameter, σ_s is the bar stress at the section under design loads, and τ_bd is the design bond stress from clause 26.2.1.1. Two notes apply: (1) for tension reinforcement, the anchorage value of any standard hooks is already included in this length; (2) for bars of non-circular cross-section, the length must still develop the full bar stress through bond.",
+    "formula_latex": "L_d = \\frac{\\phi\\,\\sigma_s}{4\\,\\tau_{bd}}",
+    "formula_nl_summary": "Development length L_d equals bar diameter times bar stress at design load divided by four times the design bond stress from clause 26.2.1.1.",
+    "tags": [
+      "development-length",
+      "bond",
+      "anchorage",
+      "formula"
+    ],
+    "category": "rcc",
+    "status": "draft",
     "see_also": [
-      "table_1_bearing_factors",
-      "table_2_shape_factors",
-      "cl_5_1_2_2_depth",
-      "cl_5_1_2_3_inclination",
-      "cl_5_1_2_4_water"
+      "table_26_2_1_1_bond_stress",
+      "cl_26_2_1_2_bundled_bars"
     ]
   },
   {
-    "id": "cl_5_1_2_2_depth",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.1.2.2",
-    "page": 9,
-    "title": "Depth factors dc, dq, d_gamma",
-    "text": "Depth factors account for the increase in bearing capacity due to embedment Df: dc = 1 + 0.2 * (Df/B) * sqrt(N_phi); for phi < 10 degrees, dq = d_gamma = 1; for phi > 10 degrees, dq = d_gamma = 1 + 0.1 * (Df/B) * sqrt(N_phi). Here N_phi = tan^2(pi/4 + phi/2). These corrections apply only when backfill is properly compacted.",
-    "formula_latex": "d_c = 1 + 0.2 \\tfrac{D_f}{B}\\sqrt{N_\\phi},\\quad d_q = d_\\gamma = 1 + 0.1 \\tfrac{D_f}{B}\\sqrt{N_\\phi}\\ (\\phi > 10\u00b0)",
-    "formula_nl_summary": "Depth factors increase bearing capacity for deeper embedment. dc grows with sqrt(N_phi); dq, d_gamma equal 1 for low phi and grow for phi > 10 degrees."
-  },
-  {
-    "id": "cl_5_1_2_3_inclination",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.1.2.3",
-    "page": 9,
-    "title": "Inclination factors ic, iq, i_gamma",
-    "text": "Inclination factors reduce bearing capacity for inclined loads. With alpha being the inclination of the load to the vertical in degrees: ic = iq = (1 - alpha/90)^2; i_gamma = (1 - alpha/phi)^2. All factors equal 1 for vertical loads (alpha = 0).",
-    "formula_latex": "i_c = i_q = \\left(1 - \\tfrac{\\alpha}{90}\\right)^2,\\quad i_\\gamma = \\left(1 - \\tfrac{\\alpha}{\\phi}\\right)^2",
-    "formula_nl_summary": "Inclination factors penalise capacity when the load isn't vertical. ic and iq use alpha/90 (degrees); i_gamma uses alpha/phi."
-  },
-  {
-    "id": "cl_5_1_2_4_water",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.1.2.4",
-    "page": 9,
-    "title": "Effect of water table \u2014 correction factor W'",
-    "text": "Water-table position affects effective unit weight and is captured by W' on the gamma term: (a) if water table is at depth >= (Df + B) below ground, W' = 1.0; (b) if water table is at depth Df (i.e., at base of footing) or above, W' = 0.5; (c) for water table between Df and (Df + B), interpolate W' linearly between 1.0 and 0.5.",
-    "formula_nl_summary": "Water table correction W' on the gamma (width) term: 1.0 if water is deep, 0.5 if water reaches the footing base, linear interpolation between."
-  },
-  {
-    "id": "cl_5_2_2_spt",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.2.2",
-    "page": 10,
-    "title": "Cohesionless soil \u2014 bearing capacity from Standard Penetration Resistance (SPT)",
-    "text": "Standard penetration resistance N is measured at 75 cm vertical intervals (or at strata changes) per IS 2131:1981, between footing base level and a depth of 1.5B to 2B below it. Average the values (rejecting any individual value more than 50 percent of the average per Amendment 1; loose-seam values are always retained). Compute capacity using: q_d = q*(Nq - 1)*sq*dq*iq + 0.5*B*gamma*N_gamma*s_gamma*d_gamma*i_gamma*W'. Read phi from Fig 1 (phi vs N), then read Nq, N_gamma from Table 1.",
-    "formula_latex": "q_d = q(N_q - 1) s_q d_q i_q + \\tfrac{1}{2} B \\gamma N_\\gamma s_\\gamma d_\\gamma i_\\gamma W'",
-    "formula_nl_summary": "For sand/cohesionless soil, derive phi from SPT N-value via Fig 1, then apply the standard formula with c=0.",
-    "see_also": [
-      "fig_1_phi_vs_N",
-      "table_1_bearing_factors"
-    ]
-  },
-  {
-    "id": "cl_5_2_3_cone",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.2.3",
-    "page": 10,
-    "title": "Cohesionless soil \u2014 bearing capacity from static cone penetration test",
-    "text": "Static cone point resistance qc is measured at 10\u201315 cm intervals per IS 4968 Part III, corrected for sounding-rod dead weight. Average values between footing base and 1.5B\u20132B below; take the minimum location-average for design. For shallow strip footings on cohesionless soils, ultimate bearing capacity is read from Fig 2 (qd/qc vs B for Df/B = 0, 0.5, 1.0).",
-    "formula_nl_summary": "For sand from cone test: read qd/qc from Fig 2 using footing width B and embedment ratio Df/B.",
-    "see_also": [
-      "fig_2_cone_chart"
-    ]
-  },
-  {
-    "id": "cl_5_3_1_1_cohesive_homog",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.3.1.1",
-    "page": 10,
-    "title": "Cohesive soil (phi = 0) \u2014 homogeneous layer, immediate post-construction",
-    "text": "For fairly saturated homogeneous cohesive soil with phi = 0, ultimate net bearing capacity immediately after construction is: q_d = c * Nc * sc * dc * ic, with Nc = 5.14. Cohesion c is from unconfined compressive strength test (or from static cone qc per 5.3.1.2). Shape, depth, inclination factors are as in 5.1. If shear strength within (2/3)B beneath the foundation varies less than 50 percent from the average, the average value may be used.",
-    "formula_latex": "q_d = c N_c s_c d_c i_c \\quad \\text{with } N_c = 5.14",
-    "formula_nl_summary": "For purely cohesive soil (phi = 0), bearing capacity reduces to c * 5.14 with shape/depth/inclination corrections. Used for clays right after construction, before consolidation."
-  },
-  {
-    "id": "cl_5_3_1_2_cohesion_from_cone",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.3.1.2",
-    "page": 12,
-    "title": "Cohesion c from static cone resistance qc",
-    "text": "When direct cohesion measurement isn't available, cohesion can be estimated from static cone point resistance qc: for normally consolidated clays (qc < 20 kgf/cm^2), c is in the range qc/18 to qc/15. For over-consolidated clays (qc > 20 kgf/cm^2), c is in the range qc/26 to qc/22.",
-    "formula_nl_summary": "Empirical cohesion-from-cone relationships: NC clays have c ~ qc/15-qc/18; OC clays have c ~ qc/22-qc/26."
-  },
-  {
-    "id": "cl_5_3_2_two_layered",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.3.2",
-    "page": 12,
-    "title": "Two-layered cohesive soil system",
-    "text": "For two layered cohesive soils without marked anisotropy, ultimate net bearing capacity of a strip footing is: q_d = c1 * Nc, where c1 is undrained cohesion of the top layer and Nc is read from Fig 3. Fig 3 plots Nc as a function of c1/c2 ratio (top to bottom layer cohesion) and d/b ratio (where d is top layer thickness below the footing base and b is half the footing width). Note (Amendment 1, 1984): Fig 3 axis ratio was corrected to c2/c1; the figure as printed shows c1/c2.",
-    "formula_latex": "q_d = c_1 N_c \\quad (\\text{Fig. 3})",
-    "formula_nl_summary": "For a layered clay system, capacity is c1 (top-layer cohesion) times Nc, where Nc depends on cohesion ratio and top layer thickness via Fig 3.",
-    "see_also": [
-      "fig_3_layered_Nc"
-    ]
-  },
-  {
-    "id": "cl_5_3_3_desiccated",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "5.3.3",
-    "page": 13,
-    "title": "Desiccated cohesive soil \u2014 cohesion decreasing with depth",
-    "text": "In desiccated cohesive soils, undrained cohesion decreases roughly linearly with depth before stabilizing (typically by ~3.5 m). Where the pressure bulb falls within the desiccated top soil and a linear cohesion-depth profile is established (Fig 4 \u2014 lambda is the rate of decrease of c with depth), capacity is obtained from Table 4 by trial and error: pick a candidate q_d, compute 4*lambda*B/q_d (corrected from 8*lambda*B/q_d per Amendment 1, 1984), and match it with q_d/c1 from Table 4. The procedure assumes a cylindrical failure surface (Amendment 1).",
-    "formula_nl_summary": "Desiccated clay procedure: iterate q_d by matching the dimensionless ratio 4*lambda*B/q_d against q_d/c1 from Table 4.",
-    "see_also": [
-      "fig_4_desiccated",
-      "table_4_desiccated"
-    ]
-  },
-  {
-    "id": "cl_6_1_allowable",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "6.1",
-    "page": 14,
-    "title": "Allowable bearing capacity",
-    "text": "Allowable bearing capacity is taken as the lesser of: (a) net ultimate bearing capacity from Section 5 divided by a suitable factor of safety \u2014 i.e., net safe bearing capacity; (b) net soil pressure that can be imposed without settlement exceeding permissible values per IS 1904:1978 \u2014 i.e., safe bearing pressure (clause 6.1.1).",
-    "formula_nl_summary": "Allowable bearing capacity = min(net safe bearing capacity from shear, safe bearing pressure from settlement)."
-  },
-  {
-    "id": "cl_6_1_1_safe_pressure",
-    "content_type": "clause",
-    "code": "IS 6403:1981",
-    "clause": "6.1.1",
-    "page": 15,
-    "title": "Safe bearing pressure \u2014 settlement-controlled",
-    "text": "Safe bearing pressure is the soil pressure that produces permissible settlement per IS 1904:1978. Compute settlements for two or three trial pressures using IS 8009 Part I (1976), then interpolate to find the pressure corresponding to permissible settlement. Per Amendment 1 (1984), this can also be derived from plate load test results (IS 1888:1982) or from standard penetration resistance.",
-    "formula_nl_summary": "Pressure that limits settlement to permissible values; computed by interpolating settlement-pressure curves or from plate load / SPT data."
-  },
-  {
-    "id": "table_1_bearing_factors",
+    "id": "table_26_2_1_1_bond_stress",
     "content_type": "table",
-    "code": "IS 6403:1981",
-    "clause": "5.1.1",
-    "page": 8,
-    "table_number": "1",
-    "caption": "Bearing capacity factors Nc, Nq, N_gamma as a function of angle of shearing resistance phi.",
+    "code": "IS 456:2000",
+    "clause": "26.2.1.1",
+    "page": 43,
+    "table_number": "26.2.1.1-bond",
+    "caption": "Design bond stress τ_bd (N/mm²) for plain bars in tension under the limit state method, by concrete grade. Embedded inline in clause 26.2.1.1; not numbered as a 'Table N' in IS 456.",
     "headers": [
-      "phi (deg)",
-      "Nc",
-      "Nq",
-      "N_gamma"
+      "Quantity",
+      "M20",
+      "M25",
+      "M30",
+      "M35",
+      "M40+"
     ],
     "rows": [
       [
-        "0",
-        "5.14",
-        "1.00",
-        "0.00"
-      ],
-      [
-        "5",
-        "6.49",
-        "1.57",
-        "0.45"
-      ],
-      [
-        "10",
-        "8.35",
-        "2.47",
-        "1.22"
-      ],
-      [
-        "15",
-        "10.98",
-        "3.94",
-        "2.65"
-      ],
-      [
-        "20",
-        "14.83",
-        "6.40",
-        "5.39"
-      ],
-      [
-        "25",
-        "20.72",
-        "10.66",
-        "10.88"
-      ],
-      [
-        "30",
-        "30.14",
-        "18.40",
-        "22.40"
-      ],
-      [
-        "35",
-        "46.12",
-        "33.30",
-        "48.03"
-      ],
-      [
-        "40",
-        "75.31",
-        "64.20",
-        "109.41"
-      ],
-      [
-        "45",
-        "138.88",
-        "134.88",
-        "271.76"
-      ],
-      [
-        "50",
-        "266.89",
-        "319.07",
-        "762.89"
+        "τ_bd, plain bars in tension (N/mm²)",
+        "1.2",
+        "1.4",
+        "1.5",
+        "1.7",
+        "1.9"
       ]
     ],
-    "note": "For local shear failure factors N'c, N'q, N'_gamma: compute phi' = arctan(0.67 * tan phi) and read the table at phi' instead. The values returned are then N'c, N'q, N'_gamma.",
-    "nl_summary": "Bearing capacity factors per IS 6403 Table 1. Values of Nc, Nq, N_gamma for phi from 0 to 50 degrees in 5-degree increments. Nc is the cohesion factor, Nq is the surcharge factor, N_gamma is the self-weight (width) factor. For phi=0, Nc=5.14, Nq=1, N_gamma=0. Values increase rapidly with phi: at phi=30, (30.14, 18.40, 22.40); at phi=40, (75.31, 64.20, 109.41)."
+    "note": "Multipliers given in the surrounding clause text: (a) for deformed bars conforming to IS 1786, multiply the tabulated values by 1.60; (b) for bars in compression, multiply the corresponding tension value by 1.25 (so a deformed bar in compression takes 1.60 × 1.25 = 2.00 × the plain-tension value). Working stress method bond stresses are given in Annex B-2.1, not here.",
+    "nl_summary": "Design bond stress τ_bd for plain bars in tension under LSM, indexed by concrete grade: 1.2 (M20), 1.4 (M25), 1.5 (M30), 1.7 (M35), 1.9 (M40+) N/mm². Apply ×1.60 for deformed bars (IS 1786) and ×1.25 for compression. τ_bd feeds the development length formula L_d = φ·σ_s / (4·τ_bd) in clause 26.2.1.",
+    "tags": [
+      "bond",
+      "development-length",
+      "concrete-grade",
+      "deformed-bar",
+      "table"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length"
+    ]
   },
   {
-    "id": "table_2_shape_factors",
+    "id": "cl_26_2_1_2_bundled_bars",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.1.2",
+    "page": 43,
+    "title": "Development length of bundled bars in contact",
+    "text": "When bars are bundled in contact, the development length of each individual bar in the bundle must be increased over the value computed for a single bar in clause 26.2.1. The increase is 10 percent for two bars in contact, 20 percent for three bars in contact, and 33 percent for four bars in contact. The increased length applies to every bar in the bundle, not only to the outer bars.",
+    "formula_nl_summary": "Bundled-bar development length multiplier on the single-bar L_d: 1.10 for 2-bar bundle, 1.20 for 3-bar bundle, 1.33 for 4-bar bundle.",
+    "tags": [
+      "development-length",
+      "bundled-bar",
+      "anchorage"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length",
+      "cl_26_1_general"
+    ]
+  },
+  {
+    "id": "cl_26_2_2_1_anchor_tension",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.2.1",
+    "page": 43,
+    "title": "Anchoring bars in tension — deformed bars, bends, hooks",
+    "text": "Per 26.2.2 (intro), every reinforcing bar must be anchored on each side of any section it crosses. For bars in tension, deformed bars do not require special end anchorages provided the development length requirement of 26.2.1 is met; for plain bars in tension, hooks should normally be provided. Bends and hooks must conform to IS 2502. The anchorage value of a bend is taken as 4 times the bar diameter for each 45 degrees of bend, capped at a maximum of 16 times the bar diameter regardless of how many 45 degree increments are present. The anchorage value of a standard U-type hook is fixed at 16 times the bar diameter.",
+    "formula_nl_summary": "Tension anchorage: deformed bars need only L_d (no special end anchor); plain bars normally need hooks. Bend anchorage = 4φ per 45° (max 16φ); standard U-hook anchorage = 16φ.",
+    "tags": [
+      "anchorage",
+      "tension",
+      "hook",
+      "bend",
+      "deformed-bar",
+      "plain-bar"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length",
+      "cl_26_2_2_5_bearing_at_bends"
+    ]
+  },
+  {
+    "id": "cl_26_2_2_2_anchor_compression",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.2.2",
+    "page": 43,
+    "title": "Anchoring bars in compression",
+    "text": "For a bar in compression, the anchorage length of a straight bar must equal the development length of bars in compression as specified in clause 26.2.1 (which uses the τ_bd value increased by 25 percent for compression). Where hooks, bends, or straight extensions beyond bends are provided on a compression bar, only their projected length — not their geometric path length — may be counted toward the development length. In other words, hooks and bends contribute no extra anchorage value in compression beyond their physical projection.",
+    "formula_nl_summary": "Compression anchorage = full L_d (compression). Hooks/bends count only by their projected (straight) length, not by an anchorage-value rule.",
+    "tags": [
+      "anchorage",
+      "compression",
+      "development-length",
+      "hook",
+      "bend"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length",
+      "table_26_2_1_1_bond_stress"
+    ]
+  },
+  {
+    "id": "cl_26_2_2_3_mechanical_anchorage",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.2.3",
+    "page": 43,
+    "title": "Mechanical anchorage devices",
+    "text": "A mechanical anchor or other proprietary device may be used in place of a standard development length, provided two conditions are satisfied: it must be capable of developing the full strength of the bar, and it must not damage the surrounding concrete. Use of such a device requires the approval of the engineer-in-charge.",
+    "formula_nl_summary": "Mechanical/proprietary anchors are allowed if they develop full bar strength without damaging concrete and have engineer-in-charge approval.",
+    "tags": [
+      "anchorage",
+      "mechanical-anchor",
+      "construction",
+      "engineer-approval"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": []
+  },
+  {
+    "id": "cl_26_2_2_4_anchor_shear",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.2.4",
+    "page": 43,
+    "title": "Anchorage of shear reinforcement — inclined bars and stirrup hooks",
+    "text": "Anchorage of shear reinforcement has two cases. (a) For inclined bars, the development length is the same as for tension bars, but the length must be measured from a defined origin: in the tension zone, from the end of the sloping/inclined portion of the bar; in the compression zone, from the mid-depth of the beam. (b) For stirrups and other secondary transverse ties, the code overrides general development-length rules and deems the anchorage adequate when the bar is bent around a longitudinal bar of at least its own diameter and continues past the curve by a length depending on the bend angle: 8 bar diameters past a 90° bend, 6 bar diameters past a 135° bend, or 4 bar diameters past a 180° bend.",
+    "formula_nl_summary": "Inclined shear bars: L_d as for tension, measured from end of incline (tension zone) or mid-depth (compression zone). Stirrup hook: 90° → 8φ tail, 135° → 6φ tail, 180° → 4φ tail; bend around a long. bar ≥ stirrup diameter.",
+    "tags": [
+      "anchorage",
+      "shear-reinforcement",
+      "stirrup",
+      "inclined-bar",
+      "bend",
+      "tie"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length",
+      "cl_26_2_2_1_anchor_tension"
+    ]
+  },
+  {
+    "id": "cl_26_2_2_5_bearing_at_bends",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.2.5",
+    "page": 43,
+    "title": "Bearing stress at bends — internal radius check",
+    "text": "When a bar is bent, the concrete inside the bend resists a radial bearing force. For bends and hooks that conform to IS 2502, no bearing-stress check is required. For any other bend, compute the bearing stress as F_bt / (r · φ), where F_bt is the design tensile force in the bar (or in a bundle, the equivalent force), r is the internal radius of the bend, and φ is the bar diameter (or the equivalent diameter of a bundle on an area basis). Under the limit state method this stress shall not exceed 1.5·f_ck / (1 + 2φ/a), where f_ck is the characteristic cube strength and a is the centre-to-centre spacing of bars perpendicular to the plane of the bend; for a bar adjacent to a face of the member, a is taken as the cover plus φ. The working stress method imposes a separate, lower limit — see Annex B.",
+    "formula_latex": "\\sigma_b = \\frac{F_{bt}}{r\\,\\phi} \\;\\leq\\; \\frac{1.5\\,f_{ck}}{1 + 2\\phi/a}",
+    "formula_nl_summary": "Inside-bend bearing stress F_bt/(r·φ) must not exceed 1.5·f_ck/(1 + 2φ/a) under LSM. Skip the check entirely for IS 2502-conforming bends/hooks. WSM uses a different (lower) limit per Annex B.",
+    "tags": [
+      "bearing-stress",
+      "bend",
+      "anchorage",
+      "concrete-strength",
+      "formula",
+      "limit-state"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_2_1_anchor_tension"
+    ]
+  },
+  {
+    "id": "cl_26_2_2_6_re_entrant_split",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.2.6",
+    "page": 43,
+    "title": "Splitting force from change in reinforcement direction",
+    "text": "When tension or compression reinforcement changes direction inside a member, the change generates a resultant force. If that resultant acts outward — that is, away from the concrete core, tending to spall or split the cover — additional links or stirrups must be provided to take up the force. The clause also gives a related design preference: a tension bar bent at a re-entrant angle (where the resultant acts outward) should be avoided in the first place rather than detailed with extra ties.",
+    "formula_nl_summary": "If a bend in a tension or compression bar pushes outward on the cover, add links/stirrups to resist the splitting force; bent tension bars at re-entrant angles should be avoided.",
+    "tags": [
+      "bend",
+      "splitting-force",
+      "anchorage",
+      "link",
+      "stirrup",
+      "re-entrant"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_2_5_bearing_at_bends"
+    ]
+  },
+  {
+    "id": "cl_26_2_3_1_curtailment_extension",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.3.1",
+    "page": 44,
+    "title": "Curtailment of tension reinforcement — extension past the cut-off point",
+    "text": "Per 26.2.3 (intro), this rule governs how far flexural tension steel must run beyond the section where it is no longer needed. Once a bar is no longer required to resist flexure, it must continue for an additional length equal to the greater of the effective depth d of the member or 12 times the bar diameter (12φ). The only exceptions are at a simple support and at the end of a cantilever, where this extension does not apply. The point at which a bar is 'no longer required for flexure' is defined in the attached note as the section where the moment of resistance, computed using only the bars that continue past the section, equals the design moment. In addition to this extension, sub-clauses 26.2.3.2 through 26.2.3.5 must also be satisfied.",
+    "formula_latex": "\\text{extension past cut-off} \\;\\geq\\; \\max(d,\\; 12\\phi)",
+    "formula_nl_summary": "Tension bar must continue past its theoretical cut-off by max(d, 12φ); not required at simple supports or cantilever tips. Cut-off point is where the continuing bars alone resist the design moment.",
+    "tags": [
+      "curtailment",
+      "tension-reinforcement",
+      "flexure",
+      "anchorage",
+      "beam"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_3_2_cutoff_tension_zone",
+      "cl_26_2_3_3_positive_moment_at_supports",
+      "cl_26_2_3_4_negative_moment_past_inflection",
+      "cl_26_2_3_5_bundled_curtailment"
+    ]
+  },
+  {
+    "id": "cl_26_2_3_2_cutoff_tension_zone",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.3.2",
+    "page": 44,
+    "title": "Termination of flexural reinforcement in a tension zone — three permitted conditions",
+    "text": "A flexural bar may not be terminated inside a tension zone unless at least one of three conditions is met. (a) The factored shear at the cut-off point is at most two-thirds of the section's permitted shear capacity, including the contribution of any web reinforcement. (b) Excess stirrup area beyond what shear and torsion already require is provided over a distance from the cut-off equal to three-quarters of the effective depth (0.75d); the excess area must satisfy A_v ≥ 0.4·b·s / f_y, where b is the beam breadth, s the stirrup spacing, and f_y the characteristic yield strength of reinforcement in N/mm², and the resulting spacing must not exceed d / (8·β_b), where β_b is the ratio of the area of bars cut-off to the total area of bars at the section. (c) For bars of diameter 36 mm or smaller, the bars that continue past the cut-off provide at least twice the area required for flexure at that section, and the factored shear is at most three-quarters of the permitted shear.",
+    "formula_latex": "A_v \\;\\geq\\; \\frac{0.4\\,b\\,s}{f_y}, \\qquad s \\;\\leq\\; \\frac{d}{8\\,\\beta_b}",
+    "formula_nl_summary": "Cannot end a flexural bar in a tension zone unless: (a) shear ≤ 2/3 capacity, OR (b) excess stirrups A_v ≥ 0.4·b·s/f_y over 0.75d with spacing ≤ d/(8·β_b), OR (c) for ≤36 mm bars, continuing bars give 2× flexural area AND shear ≤ 3/4 capacity.",
+    "tags": [
+      "curtailment",
+      "cut-off",
+      "tension-zone",
+      "stirrup",
+      "shear",
+      "beam"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_3_1_curtailment_extension"
+    ]
+  },
+  {
+    "id": "cl_26_2_3_3_positive_moment_at_supports",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.3.3",
+    "page": 44,
+    "title": "Positive-moment reinforcement extension and diameter limit at supports",
+    "text": "Three rules govern positive-moment steel near supports. (a) At least one-third of the positive-moment reinforcement in a simply supported member, and at least one-fourth in a continuous member, must extend along the same face of the member into the support for a length equal to L_d / 3. (b) When the flexural member belongs to the primary lateral-load-resisting system, this reinforcement must additionally be anchored to develop its full design tensile stress at the face of the support. (c) At simple supports and at points of inflection, the diameter of the positive-moment tension reinforcement is restricted so that L_d (computed per 26.2.1 using the design stress f_d) does not exceed M_1 / V + L_0, where M_1 is the moment of resistance of the section assuming all reinforcement at that section is stressed to f_d, V is the factored shear at the section, and L_0 is the available anchorage beyond the centre of a simple support (or, at a point of inflection, is limited to the greater of d and 12φ); f_d equals 0.87·f_y under LSM. The value of M_1 / V may be increased by 30 % when the bar ends are confined by a compressive reaction.",
+    "formula_latex": "L_d \\;\\leq\\; \\frac{M_1}{V} + L_0",
+    "formula_nl_summary": "Positive-moment steel: extend ≥1/3 (simple) or ≥1/4 (continuous) into support over L_d/3; for primary lateral system, anchor for full design stress at support face. At simple supports and inflection points, bar diameter limited so L_d ≤ M_1/V + L_0 (M_1/V × 1.3 if confined by compression reaction).",
+    "tags": [
+      "curtailment",
+      "positive-moment",
+      "support",
+      "inflection-point",
+      "anchorage",
+      "development-length",
+      "beam"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length",
+      "cl_26_2_3_1_curtailment_extension"
+    ]
+  },
+  {
+    "id": "cl_26_2_3_4_negative_moment_past_inflection",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.3.4",
+    "page": 44,
+    "title": "Negative-moment reinforcement extension past the point of inflection",
+    "text": "At least one-third of the total reinforcement provided to resist negative moment at a support must continue past the point of inflection. The extension distance from the point of inflection must be at least the greatest of three quantities: the effective depth d of the member, twelve times the bar diameter (12φ), or one-sixteenth of the clear span. This rule applies in addition to the basic curtailment extension in 26.2.3.1.",
+    "formula_latex": "\\text{extension past inflection} \\;\\geq\\; \\max\\!\\left(d,\\; 12\\phi,\\; \\frac{L_n}{16}\\right)",
+    "formula_nl_summary": "At least one-third of negative-moment steel at a support continues past the point of inflection by max(d, 12φ, clear span / 16).",
+    "tags": [
+      "curtailment",
+      "negative-moment",
+      "inflection-point",
+      "support",
+      "continuous-beam"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_3_1_curtailment_extension",
+      "cl_26_2_3_3_positive_moment_at_supports"
+    ]
+  },
+  {
+    "id": "cl_26_2_3_5_bundled_curtailment",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.3.5",
+    "page": 44,
+    "title": "Curtailment of bundled bars — staggered termination",
+    "text": "When bars are bundled, individual bars in the bundle must be terminated at staggered points rather than all at the same section. The minimum stagger distance between successive termination points is 40 times the bar diameter (40φ). The only exception is a bundle that runs into and stops at a support — in that case, the bars in the bundle may end at the same section.",
+    "formula_latex": "\\text{stagger between bundle terminations} \\;\\geq\\; 40\\,\\phi",
+    "formula_nl_summary": "Bundled bars must terminate at staggered points spaced ≥ 40φ apart, except when the bundle ends at a support.",
+    "tags": [
+      "curtailment",
+      "bundled-bar",
+      "stagger",
+      "termination"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_1_general",
+      "cl_26_2_1_2_bundled_bars",
+      "cl_26_2_3_1_curtailment_extension"
+    ]
+  },
+  {
+    "id": "cl_26_2_4_special_members_anchorage",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.4",
+    "page": 44,
+    "title": "Special members — end anchorage where bar stress is not proportional to moment",
+    "text": "In ordinary flexural members the tensile bar stress varies in step with the bending moment, so the development-length rules of 26.2.1 are sufficient on their own. The clause flags four classes of members where this proportionality does not hold and adequate end anchorage must therefore be provided explicitly: sloped, stepped, or tapered footings; brackets (corbels); deep beams; and any flexural member in which the tension reinforcement is not parallel to the compression face. In each of these, the geometry concentrates bond demand near the bar end rather than spreading it along the bar, so end anchorage is treated as a separate detailing check beyond the standard L_d.",
+    "formula_nl_summary": "Provide explicit end anchorage on tension steel in flexural members where bar stress isn't proportional to moment: sloped/stepped/tapered footings, corbels, deep beams, and members with non-parallel tension steel and compression face.",
+    "tags": [
+      "anchorage",
+      "special-member",
+      "deep-beam",
+      "corbel",
+      "footing",
+      "tapered-footing"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length"
+    ]
+  },
+  {
+    "id": "cl_26_2_5_1_lap_splices",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.5.1",
+    "page": 45,
+    "title": "Lap splices — applicability, lengths, modifiers, and special cases",
+    "text": "Per 26.2.5 (intro), splices should be located away from sections of maximum stress, staggered, and not placed where the bending moment exceeds 50 % of the moment of resistance; not more than half the bars at any section may be spliced. (a) Lap splices are not permitted for bars larger than 36 mm — these must be welded (see 12.4); if welding is impracticable, lapping of larger bars is allowed but additional spirals must enclose the lap. (b) Splices count as staggered if their centre-to-centre spacing is at least 1.3 times the lap length from (c). (c) The lap length, including the anchorage value of any hooks, is the greater of L_d (per 26.2.1) and 30φ for bars in flexural tension, and the greater of 2·L_d and 30φ for bars in direct tension; the straight portion of the lap must be at least 15φ or 200 mm, whichever is greater. The lap length is multiplied by 1.4 for a tension bar at the top of a section as cast where the cover is less than 2φ, by 1.4 for a corner tension bar where the cover to either face is less than 2φ or the clear distance between adjacent laps is less than 75 mm or 6φ (whichever is greater), and by 2.0 if both conditions apply simultaneously. Splices in tension members must be enclosed in spirals of bar diameter not less than 6 mm at a pitch not exceeding 100 mm. (d) The compression lap length equals the development length in compression but must not be less than 24φ. (e) When two different bar diameters are spliced, the lap is computed using the smaller bar's diameter. (f) For welded wire fabric, the overlap measured between extreme cross wires must be at least the cross-wire spacing plus 100 mm. (g) Bundled bars are spliced one bar at a time and these individual splices must themselves be staggered.",
+    "formula_latex": "L_{lap,\\,flex.tens} = \\max(L_d,\\; 30\\phi); \\quad L_{lap,\\,direct.tens} = \\max(2 L_d,\\; 30\\phi); \\quad L_{lap,\\,comp} = \\max(L_d^{(c)},\\; 24\\phi)",
+    "formula_nl_summary": "Lap = max(L_d, 30φ) flexural tension; max(2·L_d, 30φ) direct tension; max(L_d-comp, 24φ) compression. Straight length ≥ max(15φ, 200 mm). Modifiers: ×1.4 for top bar (cover<2φ), ×1.4 for corner bar (cover<2φ or clear<max(75 mm,6φ)), ×2.0 if both. Different diameters → use smaller. Bars >36 mm: weld; bundled bars: stagger one at a time; tension splice enclosed by 6 mm spiral, pitch ≤100 mm.",
+    "tags": [
+      "splice",
+      "lap-splice",
+      "tension",
+      "compression",
+      "welded-wire-fabric",
+      "bundled-bar",
+      "stagger",
+      "development-length"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_1_development_length",
+      "cl_26_2_5_2_weld_strength",
+      "cl_26_2_5_3_end_bearing_splice"
+    ]
+  },
+  {
+    "id": "cl_26_2_5_2_weld_strength",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.5.2",
+    "page": 45,
+    "title": "Strength of welded and mechanical splices",
+    "text": "Welded and mechanical splices may be designed at the strengths below only when the strength of the weld has been verified by tests to be at least equal to that of the parent bar. (a) For splices in compression — both welded splices and mechanical connections may be taken at 100 % of the design strength of the joined bars. (b) For splices in tension — welded bars may be designed at 80 % of the design strength, increased to 100 % only if welding is strictly supervised and at any cross-section of the member not more than 20 % of the tensile reinforcement is welded; mechanical connections may be designed at 100 % of the design strength.",
+    "formula_nl_summary": "Welded/mechanical splice strengths: 100 % in compression. In tension: welded bars 80 % (100 % if strictly supervised AND ≤20 % of tensile steel welded at any section), mechanical connections 100 %. Requires test verification that weld strength matches the parent bar.",
+    "tags": [
+      "splice",
+      "welded-splice",
+      "mechanical-connection",
+      "tension",
+      "compression",
+      "design-strength"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_5_1_lap_splices",
+      "cl_26_2_5_3_end_bearing_splice"
+    ]
+  },
+  {
+    "id": "cl_26_2_5_3_end_bearing_splice",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.2.5.3",
+    "page": 45,
+    "title": "End-bearing splices — compression bars only",
+    "text": "End-bearing splices, in which load transfers between bars through direct end-to-end contact, may be used only for bars carrying compression. They are not permitted for bars in tension under any circumstances. The detailing requirements are: the bar ends must be cut square (perpendicular to the bar axis), and concentric bearing between the two end faces must be ensured by a suitable proprietary device or sleeve.",
+    "formula_nl_summary": "End-bearing splices permitted only for compression bars; ends cut square and concentric bearing maintained by a suitable device.",
+    "tags": [
+      "splice",
+      "end-bearing-splice",
+      "compression",
+      "detailing"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_5_1_lap_splices",
+      "cl_26_2_5_2_weld_strength"
+    ]
+  },
+  {
+    "id": "cl_26_3_1_diameter_for_spacing",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.3.1",
+    "page": 45,
+    "title": "Spacing of reinforcement — definition of bar diameter for spacing rules",
+    "text": "Per 26.3 (intro), this clause defines what 'diameter' means whenever the spacing or cover rules in this code reference it. For a round bar, the diameter is simply the nominal diameter. For non-round bars, deformed bars, or crimped bars, the diameter is taken as the diameter of a circle whose area equals the bar's effective cross-sectional area (the equivalent-area diameter). The same convention extends to bundled bars: where a spacing limit or a cover requirement under 26.4 is expressed in terms of bar diameter, a bundle of bars in contact is treated as a single equivalent bar whose diameter is derived from the total area of the bundle.",
+    "formula_nl_summary": "For spacing/cover rules: bar diameter = nominal diameter (round bar), equivalent-area diameter (non-round/deformed/crimped). A bundle is treated as one bar with diameter from the bundle's total equivalent area.",
+    "tags": [
+      "spacing",
+      "bar-diameter",
+      "deformed-bar",
+      "bundled-bar",
+      "definition"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_3_2_min_distance",
+      "cl_26_3_3_max_distance_tension"
+    ]
+  },
+  {
+    "id": "cl_26_3_2_min_distance",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.3.2",
+    "page": 45,
+    "title": "Minimum distance between individual bars",
+    "text": "Three rules set the minimum clear spacing between bars. (a) Horizontal spacing between two parallel main bars must be at least the greatest of: the bar diameter (when the two bars have equal diameter), the larger bar diameter (when they differ), or 5 mm more than the nominal maximum size of coarse aggregate. The attached note clarifies that this does not preclude using a larger aggregate elsewhere in the same member; aggregate may be locally reduced around congested reinforcement to satisfy this rule. (b) Greater horizontal spacing should be provided wherever possible. When needle vibrators are used, the horizontal spacing within a group of bars may be reduced to two-thirds of the nominal maximum aggregate size, provided enough space is left between groups for the vibrator to be inserted. (c) Where bars are arranged in two or more rows, the bars must be vertically aligned and the minimum vertical clear distance between rows must be the greatest of 15 mm, two-thirds of the nominal maximum aggregate size, and the maximum bar diameter.",
+    "formula_latex": "s_{h,\\min} \\;=\\; \\max(\\phi_{\\max},\\; d_{ag} + 5\\,\\text{mm}); \\qquad s_{v,\\min} \\;=\\; \\max(15\\,\\text{mm},\\; \\tfrac{2}{3}d_{ag},\\; \\phi_{\\max})",
+    "formula_nl_summary": "Min horizontal spacing between main bars = max(larger bar dia, nominal max aggregate + 5 mm). With needle vibrators, intra-group horizontal spacing may drop to 2/3 of nominal max aggregate. Min vertical spacing for multi-row arrangements = max(15 mm, 2/3 nominal max aggregate, largest bar dia).",
+    "tags": [
+      "spacing",
+      "min-spacing",
+      "horizontal-spacing",
+      "vertical-spacing",
+      "aggregate-size",
+      "needle-vibrator"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_3_1_diameter_for_spacing",
+      "cl_26_3_3_max_distance_tension"
+    ]
+  },
+  {
+    "id": "cl_26_3_3_max_distance_tension",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.3.3",
+    "page": 46,
+    "title": "Maximum distance between bars in tension — beams and slabs",
+    "text": "Unless an explicit crack-width calculation justifies a wider spacing, this clause caps the maximum spacing between tension bars in flexural members exposed to normal internal or external conditions. (a) For beams, the horizontal distance between parallel reinforcement bars (or groups of bars) near the tension face must not exceed the value tabulated in Table 15, which depends on the percentage of moment redistribution carried out in analysis and the characteristic strength of reinforcement. (b) For slabs, two limits apply by bar function: the horizontal spacing of parallel main reinforcement must not exceed three times the effective depth of the solid slab or 300 mm, whichever is smaller; and the horizontal spacing of bars provided against shrinkage and temperature must not exceed five times the effective depth of the solid slab or 450 mm, whichever is smaller.",
+    "formula_latex": "\\text{slab main steel: } s \\leq \\min(3d,\\; 300\\text{ mm}); \\qquad \\text{slab S\\&T steel: } s \\leq \\min(5d,\\; 450\\text{ mm})",
+    "formula_nl_summary": "Max bar spacing in tension face: beams use Table 15 (function of moment redistribution and f_y); slab main bars ≤ min(3d, 300 mm); slab shrinkage-and-temperature bars ≤ min(5d, 450 mm). May be relaxed only by an explicit crack-width check.",
+    "tags": [
+      "spacing",
+      "max-spacing",
+      "tension",
+      "beam",
+      "slab",
+      "shrinkage-temperature",
+      "crack-width"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_3_1_diameter_for_spacing",
+      "cl_26_3_2_min_distance",
+      "table_15_max_spacing"
+    ]
+  },
+  {
+    "id": "cl_26_4_nominal_cover",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.4.1",
+    "page": 46,
+    "title": "Nominal cover — definition and minimum bar-diameter rule",
+    "text": "Per 26.4 (intro), this section governs the nominal cover to reinforcement; this sub-clause defines the term itself. The nominal cover is the design depth of concrete cover provided to all steel reinforcement, including any links and stirrups. It is the dimension explicitly used in design calculations and explicitly indicated on the structural drawings — distinct from the actual as-cast cover, which may differ due to construction tolerances. As a baseline rule applicable everywhere this code uses 'nominal cover', the value provided shall not be less than the diameter of the bar it covers. Sub-clauses 26.4.2 and 26.4.3 give the additional minimum cover values required for durability and fire resistance respectively.",
+    "formula_latex": "c_{nom} \\;\\geq\\; \\phi",
+    "formula_nl_summary": "Nominal cover = design cover depth to all steel including links/stirrups, as shown on drawings; must be at least the bar diameter. Durability and fire impose additional minima (26.4.2, 26.4.3).",
+    "tags": [
+      "cover",
+      "nominal-cover",
+      "definition",
+      "bar-diameter",
+      "detailing"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_4_2_durability_cover",
+      "cl_26_4_2_1_column_cover",
+      "cl_26_4_2_2_footing_cover",
+      "cl_26_4_3_fire_cover"
+    ]
+  },
+  {
+    "id": "cl_26_4_2_durability_cover",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.4.2",
+    "page": 46,
+    "title": "Nominal cover for durability — exposure-based minima",
+    "text": "Minimum values of nominal cover for normal-weight aggregate concrete, applicable to all reinforcement including links, are set by the exposure condition the member is subjected to. The five exposure categories (mild, moderate, severe, very severe, extreme) are themselves defined in clause 8.2.3 and depend on the surrounding environment — atmospheric, soil, marine, chemical, and so on. The numerical cover requirements for each exposure are tabulated in Table 16. Note that the column-specific minimum (26.4.2.1) and footing-specific minimum (26.4.2.2) override the Table 16 values where they are larger.",
+    "formula_nl_summary": "Minimum cover for durability is set by exposure category (mild / moderate / severe / very severe / extreme per 8.2.3) and looked up in Table 16. Column and footing minima from 26.4.2.1 and 26.4.2.2 may govern.",
+    "tags": [
+      "cover",
+      "durability",
+      "exposure",
+      "nominal-cover"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_4_nominal_cover",
+      "cl_26_4_2_1_column_cover",
+      "cl_26_4_2_2_footing_cover",
+      "table_16_durability_cover"
+    ]
+  },
+  {
+    "id": "cl_26_4_2_1_column_cover",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.4.2.1",
+    "page": 46,
+    "title": "Nominal cover to longitudinal bars in columns",
+    "text": "For a longitudinal reinforcing bar in a column, the nominal cover must in any case not be less than 40 mm and not less than the diameter of the bar; the larger of the two governs. A single explicit relaxation is permitted: in columns whose minimum cross-section dimension is 200 mm or under and whose longitudinal bars do not exceed 12 mm in diameter, a nominal cover of 25 mm may be used. This 40 mm baseline overrides the lower exposure-based values that Table 16 would otherwise give for mild or moderate exposure.",
+    "formula_latex": "c_{nom,\\,col} \\;\\geq\\; \\max(40\\text{ mm},\\;\\phi); \\quad\\text{exception: } 25\\text{ mm if } b_{\\min} \\leq 200\\text{ mm and } \\phi \\leq 12\\text{ mm}",
+    "formula_nl_summary": "Column longitudinal-bar cover ≥ max(40 mm, bar diameter). Relaxation to 25 mm only when min column dimension ≤ 200 mm AND all bars ≤ 12 mm.",
+    "tags": [
+      "cover",
+      "column",
+      "nominal-cover",
+      "longitudinal-reinforcement",
+      "durability"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_4_nominal_cover",
+      "cl_26_4_2_durability_cover",
+      "table_16_durability_cover"
+    ]
+  },
+  {
+    "id": "cl_26_4_2_2_footing_cover",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.4.2.2",
+    "page": 46,
+    "title": "Nominal cover for footings",
+    "text": "For footings, the minimum nominal cover to reinforcement shall be 50 mm. This value applies to all reinforcement in the footing, irrespective of bar diameter, and overrides any lower exposure-based value that Table 16 would otherwise produce for the same exposure category.",
+    "formula_latex": "c_{nom,\\,footing} \\;\\geq\\; 50\\text{ mm}",
+    "formula_nl_summary": "Minimum cover for footings is 50 mm, governing over Table 16 where the latter would give a lower value.",
+    "tags": [
+      "cover",
+      "footing",
+      "nominal-cover",
+      "durability"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_4_nominal_cover",
+      "cl_26_4_2_durability_cover",
+      "table_16_durability_cover"
+    ]
+  },
+  {
+    "id": "cl_26_4_3_fire_cover",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.4.3",
+    "page": 46,
+    "title": "Nominal cover for fire resistance",
+    "text": "Minimum values of nominal cover for normal-weight aggregate concrete, applicable to all reinforcement including links, that are required to achieve a specified period of fire resistance are tabulated in Table 16A. The required cover depends on both the member type (beam, slab, rib, column) and the support condition (simply supported vs continuous), and is indexed by the target fire-resistance period in hours. The notes to Table 16A clarify that the tabulated values relate to the minimum member dimensions given in Fig. 1, and that cases below the bold line in the table additionally require the spalling-mitigation measures of clause 21.3.1.",
+    "formula_nl_summary": "Cover for fire resistance is looked up in Table 16A, indexed by member type, support condition, and target fire-resistance period in hours. Sub-bold-line cases additionally require anti-spalling measures per 21.3.1.",
+    "tags": [
+      "cover",
+      "fire-resistance",
+      "nominal-cover",
+      "spalling"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_4_nominal_cover",
+      "cl_26_4_2_durability_cover",
+      "table_16a_fire_cover"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_1_min_tension_steel",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.1",
+    "page": 46,
+    "title": "Beams — minimum and maximum tension reinforcement",
+    "text": "Per 26.5 (intro) and the 26.5.1 sub-heading 'Beams', this clause sets bounds on the tension reinforcement in a beam. (a) The minimum area of tension reinforcement shall not be less than that given by A_s / (b·d) = 0.85 / f_y, where A_s is the minimum area of tension reinforcement, b is the breadth of the beam (or the breadth of the web for a flanged section), d is the effective depth, and f_y is the characteristic strength of reinforcement in N/mm². The 0.85 / f_y ratio means a beam with Fe 415 steel needs about 0.205 % minimum, and a Fe 500 beam needs about 0.17 %. (b) The maximum area of tension reinforcement shall not exceed 0.04·b·D, where D is the overall depth of the beam.",
+    "formula_latex": "\\frac{A_s}{b\\,d} \\;\\geq\\; \\frac{0.85}{f_y}, \\qquad A_{s,\\max} \\;\\leq\\; 0.04\\,b\\,D",
+    "formula_nl_summary": "Beam tension steel: minimum ratio A_s/(b·d) ≥ 0.85/f_y (≈0.205 % for Fe 415, ≈0.17 % for Fe 500); maximum area ≤ 0.04·b·D. Use web breadth for flanged sections.",
+    "tags": [
+      "beam",
+      "tension-reinforcement",
+      "min-steel",
+      "max-steel",
+      "flexure",
+      "flanged-section"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_2_compression_steel"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_2_compression_steel",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.2",
+    "page": 47,
+    "title": "Beams — compression reinforcement",
+    "text": "The maximum area of compression reinforcement in a beam shall not exceed 0.04·b·D, where b is the beam breadth and D the overall depth — the same ceiling that applies to tension reinforcement. Compression reinforcement must be enclosed by stirrups so that the bars are restrained against buckling under compressive load. The arrangement of these stirrups — including the rules on which longitudinal bars must be tied, the maximum unsupported lateral length, and the tie diameter and pitch — is specified in clause 26.5.3.2.",
+    "formula_latex": "A_{sc,\\max} \\;\\leq\\; 0.04\\,b\\,D",
+    "formula_nl_summary": "Beam compression steel: maximum area ≤ 0.04·b·D. Must be enclosed in stirrups for lateral restraint, with stirrup arrangement per 26.5.3.2.",
+    "tags": [
+      "beam",
+      "compression-reinforcement",
+      "max-steel",
+      "stirrup",
+      "lateral-restraint"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_1_min_tension_steel",
+      "cl_26_5_3_2_lateral_ties"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_3_side_face",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.3",
+    "page": 47,
+    "title": "Beams — side-face reinforcement for deep webs",
+    "text": "Where the depth of the web in a beam exceeds 750 mm, side-face reinforcement must be provided along the two vertical faces of the web in addition to the main flexural steel. The total area of side-face reinforcement (summed across both faces) shall be at least 0.1 % of the web area. The reinforcement must be distributed equally on the two faces, and the spacing between bars on each face shall not exceed 300 mm or the web thickness, whichever is less.",
+    "formula_latex": "A_{sf} \\;\\geq\\; 0.001\\,(b_w \\cdot d_w); \\qquad s_{sf} \\;\\leq\\; \\min(300\\text{ mm},\\; b_w)",
+    "formula_nl_summary": "When web depth > 750 mm in a beam: provide side-face steel ≥ 0.1 % of web area, split equally between two faces, at spacing ≤ min(300 mm, web thickness).",
+    "tags": [
+      "beam",
+      "side-face",
+      "deep-beam",
+      "web",
+      "crack-control",
+      "tension-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_1_min_tension_steel"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_4_transverse_around_bars",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.4",
+    "page": 47,
+    "title": "Beams — transverse reinforcement enclosure rule",
+    "text": "Transverse reinforcement in a beam (the stirrups or links provided for shear and torsion) shall be taken around the outermost tension and compression bars; in other words, the stirrups must enclose the full longitudinal-bar cage rather than only an inner subset of bars. For T-beams and I-beams, this enclosure rule extends into the flange: the transverse reinforcement must additionally pass around any longitudinal bars located close to the outer face of the flange. The rule defines the geometric path of the stirrup and applies regardless of the actual size or spacing of the stirrups, which are governed by clauses 26.5.1.5 and 26.5.1.6.",
+    "formula_nl_summary": "Beam stirrups must enclose the outermost tension AND compression longitudinal bars. In T- and I-beams, stirrups must also wrap around longitudinal bars near the outer face of the flange.",
+    "tags": [
+      "beam",
+      "transverse-reinforcement",
+      "stirrup",
+      "shear-reinforcement",
+      "t-beam",
+      "i-beam",
+      "flange"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_2_compression_steel"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_5_max_spacing_shear",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.5",
+    "page": 47,
+    "title": "Beams — maximum spacing of shear reinforcement",
+    "text": "The maximum spacing of shear reinforcement, measured along the axis of the member, is capped by two limits. For vertical stirrups, the spacing must not exceed 0.75·d, where d is the effective depth of the section under consideration. For inclined stirrups at 45 degrees, the spacing must not exceed d. In addition, in no case shall the spacing of shear reinforcement exceed 300 mm. Both the angle-dependent limit and the absolute 300 mm cap are checked, and the smaller governs.",
+    "formula_latex": "s_{v} \\;\\leq\\; \\min(0.75\\,d,\\; 300\\text{ mm}) \\;\\text{(vertical)}; \\qquad s_{v} \\;\\leq\\; \\min(d,\\; 300\\text{ mm}) \\;\\text{(45° inclined)}",
+    "formula_nl_summary": "Beam shear reinforcement spacing ≤ 0.75d (vertical stirrups) or d (inclined stirrups at 45°); in either case ≤ 300 mm absolute. d = effective depth.",
+    "tags": [
+      "beam",
+      "shear-reinforcement",
+      "stirrup",
+      "max-spacing",
+      "spacing"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_6_min_shear",
+      "cl_26_5_1_4_transverse_around_bars"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_6_min_shear",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.6",
+    "page": 48,
+    "title": "Beams — minimum shear reinforcement",
+    "text": "Minimum shear reinforcement, in the form of stirrups, must be provided in beams such that A_sv / (b · s_v) ≥ 0.4 / (0.87 · f_y), where A_sv is the total cross-sectional area of stirrup legs effective in shear, s_v is the stirrup spacing along the length of the member, b is the breadth of the beam (or the breadth of the web for a flanged beam), and f_y is the characteristic strength of the stirrup reinforcement in N/mm² and shall not be taken greater than 415 N/mm² when applying this formula. The minimum-shear-reinforcement requirement may be waived only when both of the following hold: the maximum shear stress calculated for the section is less than half the permissible value, AND the member is of minor structural importance, such as a lintel.",
+    "formula_latex": "\\frac{A_{sv}}{b\\,s_v} \\;\\geq\\; \\frac{0.4}{0.87\\,f_y} \\quad\\text{with}\\quad f_y \\leq 415\\,\\text{N/mm}^2",
+    "formula_nl_summary": "Minimum shear reinforcement: A_sv/(b·s_v) ≥ 0.4/(0.87·f_y), with f_y capped at 415 N/mm² for this check. Waiver only if max shear stress < 0.5 × permissible AND member is of minor structural importance (e.g. lintel).",
+    "tags": [
+      "beam",
+      "shear-reinforcement",
+      "min-steel",
+      "stirrup",
+      "lintel"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_5_max_spacing_shear"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_7_torsion",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.7",
+    "page": 48,
+    "title": "Beams — distribution of torsion reinforcement",
+    "text": "When a member is designed for torsion (per Section 41 for limit state design or Annex B-6 for working stress design), torsion reinforcement must be detailed as follows. (a) The transverse reinforcement for torsion must be in the form of rectangular closed stirrups placed perpendicular to the member axis; the spacing of these closed stirrups must not exceed the least of three values: x_1 (the short dimension of the stirrup), (x_1 + y_1)/4 (where y_1 is the long dimension), and 300 mm. (b) Longitudinal reinforcement must be placed as close to the corners of the cross-section as practicable, with at least one longitudinal bar in each corner of the closed ties. Where the cross-sectional dimension of the member exceeds 450 mm, additional longitudinal bars must be provided to satisfy the minimum reinforcement and spacing requirements of 26.5.1.3 (the side-face reinforcement rule applied here for torsion).",
+    "formula_latex": "s_{tor} \\;\\leq\\; \\min\\!\\left(x_1,\\; \\frac{x_1 + y_1}{4},\\; 300\\text{ mm}\\right)",
+    "formula_nl_summary": "Torsion reinforcement: rectangular closed stirrups perpendicular to member axis, spacing ≤ min(x_1, (x_1+y_1)/4, 300 mm) where x_1 < y_1 are the stirrup short and long dimensions. Longitudinal bar in each corner; for member dimensions > 450 mm, add longitudinal bars per 26.5.1.3.",
+    "tags": [
+      "beam",
+      "torsion",
+      "closed-stirrup",
+      "rectangular-stirrup",
+      "transverse-reinforcement",
+      "longitudinal-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_3_side_face",
+      "cl_26_5_1_4_transverse_around_bars"
+    ]
+  },
+  {
+    "id": "cl_26_5_1_8_flange_steel",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.1.8",
+    "page": 48,
+    "title": "Beams — reinforcement in flanges of T- and L-beams",
+    "text": "Reinforcement in the flanges of T-beams and L-beams must satisfy the requirements of clause 23.1.1(b). When the flanges are in tension (e.g. over a continuous-beam support), a part of the main tension reinforcement must be distributed across either the effective flange width or a width equal to one-tenth of the span, whichever is the smaller. If the effective flange width exceeds one-tenth of the span, nominal longitudinal reinforcement must additionally be provided in the outer portions of the flange — that is, in the part of the flange that lies beyond the span/10 zone of distributed main tension steel.",
+    "formula_nl_summary": "T- and L-beam flanges: per 23.1.1(b). Where flange in tension, distribute part of main tension steel over min(effective flange width, span/10). If effective flange width > span/10, provide nominal longitudinal steel in the outer flange portions beyond the span/10 zone.",
+    "tags": [
+      "beam",
+      "t-beam",
+      "l-beam",
+      "flange",
+      "tension-reinforcement",
+      "continuous-beam"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_1_min_tension_steel"
+    ]
+  },
+  {
+    "id": "cl_26_5_2_slabs",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.2",
+    "page": 48,
+    "title": "Slabs — minimum reinforcement and maximum bar diameter",
+    "text": "Per 26.5.2 (intro), the rules below apply to slabs in addition to any other applicable requirements. Per 26.5.2.1 (Minimum reinforcement): the area of mild-steel reinforcement in either direction in a slab shall not be less than 0.15 percent of the total cross-sectional area of the slab. This baseline may be reduced to 0.12 percent when high-strength deformed bars or welded-wire fabric is used in place of mild steel. Per 26.5.2.2 (Maximum diameter): the diameter of any reinforcing bar in a slab shall not exceed one-eighth of the total thickness of the slab.",
+    "formula_latex": "A_{s,\\,slab,\\min} = \\begin{cases} 0.0015\\,A_{gross} & \\text{mild steel} \\\\ 0.0012\\,A_{gross} & \\text{HYSD or WWF} \\end{cases}; \\qquad \\phi_{\\max} \\;\\leq\\; \\frac{D_{slab}}{8}",
+    "formula_nl_summary": "Slab minimum reinforcement: 0.15 % of gross area for mild steel, 0.12 % for HSD bars or welded wire fabric. Maximum bar diameter ≤ slab thickness / 8.",
+    "tags": [
+      "slab",
+      "min-steel",
+      "bar-diameter",
+      "deformed-bar",
+      "welded-wire-fabric",
+      "mild-steel"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_3_3_max_distance_tension"
+    ]
+  },
+  {
+    "id": "cl_26_5_3_1_column_long_steel",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.3.1",
+    "page": 48,
+    "title": "Columns — longitudinal reinforcement (general, helical, and pedestal rules)",
+    "text": "Per 26.5.3 (intro), this clause governs longitudinal steel in columns and contains eight sub-rules. (a) The cross-sectional area of longitudinal reinforcement shall be not less than 0.8 percent and not more than 6 percent of the gross cross-sectional area of the column; the attached note observes that 6 percent causes practical placing and compaction difficulties, so lower percentages are recommended, and where bars from the column below are lapped with those above, the percentage usually should not exceed 4 percent. (b) For a column whose cross-section is larger than required by load, the minimum percentage may be computed against the area of concrete actually required to resist the direct stress, not against the actual gross area. (c) The minimum number of longitudinal bars is four for rectangular columns and six for circular columns. (d) Bars shall be not less than 12 mm in diameter. (e) A column reinforced with helical transverse reinforcement shall have at least six longitudinal bars within the helical. (f) In a helically reinforced column, the longitudinal bars shall be in contact with the helical and equidistant around its inner circumference. (g) The spacing of longitudinal bars measured along the periphery of the column shall not exceed 300 mm. (h) For pedestals (compression members whose effective length does not exceed three times the least lateral dimension) in which longitudinal reinforcement is not used in strength calculations, nominal longitudinal reinforcement of not less than 0.15 percent of the cross-sectional area shall still be provided.",
+    "formula_latex": "0.008\\,A_{gross} \\;\\leq\\; A_{sc} \\;\\leq\\; 0.06\\,A_{gross} \\;\\;(\\leq 0.04 \\text{ recommended at lap}); \\quad N_{\\min,\\,bars} = 4\\,(\\text{rect}),\\;6\\,(\\text{circ},\\;\\text{helical}); \\quad \\phi \\geq 12\\text{ mm}; \\quad s_{periphery} \\leq 300\\text{ mm}; \\quad A_{sc,\\,pedestal} \\geq 0.0015\\,A_{gross}",
+    "formula_nl_summary": "Column longitudinal steel: 0.8 % to 6 % of gross area (4 % recommended at laps). Minimum 4 bars (rectangular) or 6 bars (circular, also helical). Min bar diameter 12 mm. Helical columns: longitudinal bars in contact with helix, equidistant around inner circumference. Peripheral spacing ≤ 300 mm. Pedestals (effective length ≤ 3× least lateral dim) without longitudinal in calc still need ≥ 0.15 % nominal.",
+    "tags": [
+      "column",
+      "longitudinal-reinforcement",
+      "min-steel",
+      "max-steel",
+      "helical",
+      "circular-column",
+      "rectangular-column",
+      "pedestal",
+      "bar-diameter"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_3_2_lateral_ties",
+      "cl_26_5_3_2_helicals",
+      "cl_26_5_3_3_offset_bars"
+    ]
+  },
+  {
+    "id": "cl_26_5_3_2_helicals",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.3.2",
+    "page": 49,
+    "title": "Columns — helical reinforcement: pitch and diameter",
+    "text": "This sub-clause is sub-point (d) of 26.5.3.2 and covers helical transverse reinforcement (the alternative to polygonal lateral ties from cl_26_5_3_2_lateral_ties). (1) Pitch: helical reinforcement shall be of regular formation with the turns of the helix spaced evenly, and its ends shall be anchored properly by providing one and a half extra turns of the spiral bar. Where the column design relies on the strength contribution of the helical reinforcement (i.e. the increased axial load capacity allowed when helicals confine the core), the pitch of the helical turns must lie within all four of the following bounds: not more than 75 mm, not more than one-sixth of the core diameter of the column, not less than 25 mm, and not less than three times the diameter of the steel bar forming the helix. In any other case (where the design does not rely on the helical strength contribution), the general column transverse-reinforcement requirements of 26.5.3.2 (i.e. the lateral-tie pitch and diameter rules) must be complied with instead. (2) Diameter: the diameter of the helical reinforcement is governed by the same rule as for polygonal links — see clause 26.5.3.2 (c)(2), captured in cl_26_5_3_2_lateral_ties.",
+    "formula_latex": "p_{helix} \\in \\left[\\max(25\\text{ mm},\\; 3\\phi_{helix}),\\; \\min(75\\text{ mm},\\; D_{core}/6)\\right] \\;\\;\\text{(when relying on helical strength)}",
+    "formula_nl_summary": "Helical reinforcement: regular formation, ends anchored with 1.5 extra turns. When the design uses the helical strength enhancement: pitch must be ≤ 75 mm AND ≤ core_dia/6 AND ≥ 25 mm AND ≥ 3·helical_bar_dia. Otherwise, fall back to the lateral-tie rules of 26.5.3.2. Helix diameter follows the same rule as lateral ties (φ_long_max / 4 floor, with PDF's 16 mm absolute floor flagged for verification).",
+    "tags": [
+      "column",
+      "helical",
+      "spiral",
+      "pitch",
+      "transverse-reinforcement",
+      "circular-column"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_3_2_lateral_ties",
+      "cl_26_5_3_1_column_long_steel"
+    ]
+  },
+  {
+    "id": "cl_26_5_3_2_lateral_ties",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.3.2",
+    "page": 48,
+    "title": "Columns — lateral ties: general, arrangement, pitch, and diameter",
+    "text": "This clause sets out transverse reinforcement using polygonal lateral ties (see clause cl_26_5_3_2_helicals for the helical option). (a) General: a reinforced concrete compression member shall have transverse reinforcement so disposed that every longitudinal bar nearest to the compression face has effective lateral support against buckling. The lateral support is provided by transverse reinforcement either in the form of circular rings (taking up circumferential tension) or polygonal links/lateral ties whose internal angles do not exceed 135°; ends of the transverse reinforcement must be properly anchored per 26.2.2.4(b). (b) Arrangement: (1) if longitudinal bars are not spaced more than 75 mm on either side, transverse reinforcement need only loop around corner and alternate bars (see Fig. 8); (2) if longitudinal bars are spaced ≤ 48 times the tie diameter and are effectively tied in two directions, additional intermediate bars need be tied in one direction only by open ties (see Fig. 9); (3) where longitudinal bars sit in more than one row, lateral support to inner-row bars may be assumed provided the outer-most row is tied per 26.5.3.2 AND no inner-row bar is closer than three times the inner-row largest bar diameter to the nearest compression face (see Fig. 10); (4) where longitudinal bars are grouped (not in contact) and each group is adequately tied, the transverse reinforcement for the column as a whole may treat each group as a single bar for pitch and diameter calculations, and the diameter of the transverse reinforcement need not exceed 20 mm in this case (see Fig. 11). (c) Pitch and diameter: the pitch of transverse reinforcement shall not exceed the least of the column's least lateral dimension, 16 times the smallest tied-longitudinal-bar diameter, and 300 mm. The tie diameter shall be at least one-fourth of the diameter of the largest longitudinal bar, and in no case less than 16 mm (per the printed PDF — see decisions log; engineering practice and amendments may give 6 mm).",
+    "formula_latex": "\\text{pitch} \\;\\leq\\; \\min(b_{\\min},\\; 16\\phi_{long,\\min},\\; 300\\text{ mm}); \\qquad \\phi_{tie} \\;\\geq\\; \\max\\!\\left(\\tfrac{\\phi_{long,\\max}}{4},\\; 16\\text{ mm}\\;\\text{[PDF; verify]}\\right)",
+    "formula_nl_summary": "Column lateral ties cover three rules. General: every longitudinal bar near compression face has lateral support via rings or polygonal links (≤135° angles). Arrangement: 75 mm rule, 48φ_tie rule, multi-row rule, grouped-bars rule (group = single bar; tie ≤ 20 mm). Pitch ≤ min(least lateral dim, 16·smallest long bar dia, 300 mm). Tie diameter ≥ max(φ_long_max / 4, 16 mm per PDF — flag: amendment may correct to 6 mm).",
+    "tags": [
+      "column",
+      "lateral-tie",
+      "transverse-reinforcement",
+      "tie",
+      "lateral-restraint",
+      "polygonal-link",
+      "pitch"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_3_1_column_long_steel",
+      "cl_26_5_3_2_helicals",
+      "cl_26_2_2_4_anchor_shear"
+    ]
+  },
+  {
+    "id": "cl_26_5_3_3_offset_bars",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "26.5.3.3",
+    "page": 49,
+    "title": "Columns — offset bars at splices",
+    "text": "Where longitudinal bars are offset (cranked) at a splice — typically because the column above is smaller than the column below — the geometry and detailing must satisfy several rules. The slope of the inclined portion of the bar with respect to the column axis must not exceed 1 in 6, and the portions of the bar above and below the offset must run parallel to the column axis. Adequate horizontal support must be provided at the offset bends, treated as a matter of design and supplied by metal ties, spirals, or parts of the floor construction; these supports must be placed within a distance of not more than eight bar diameters from the point of bend. The horizontal thrust to be resisted at each bend shall be taken as one and a half times the horizontal component of the nominal stress in the inclined portion of the bar. Offset bars must be bent before they are placed in the forms, not after. Where the column faces are offset by 75 mm or more, the inclined-bar method is not permitted: instead, splices for the vertical bars adjacent to the offset face must be made via separate dowels overlapped per 26.2.5.1.",
+    "formula_latex": "\\text{slope} \\;\\leq\\; 1{:}6; \\qquad d_{tie\\;\\text{from bend}} \\;\\leq\\; 8\\,\\phi; \\qquad H_{thrust} \\;=\\; 1.5 \\cdot H_{nominal,\\,inclined}",
+    "formula_nl_summary": "Column offset bars: slope ≤ 1 in 6; portions above and below parallel to column axis. Horizontal support (ties, spirals, or floor) within 8φ of the bend, designed for 1.5× the horizontal component of nominal bar stress in the inclined portion. Bars bent before placing in forms. If face offset ≥ 75 mm, use separate dowels overlapped per 26.2.5.1 instead.",
+    "tags": [
+      "column",
+      "offset-bar",
+      "splice",
+      "lap-splice",
+      "tie",
+      "spiral",
+      "dowel"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_2_5_1_lap_splices",
+      "cl_26_5_3_1_column_long_steel",
+      "cl_26_5_3_2_lateral_ties"
+    ]
+  },
+  {
+    "id": "cl_38_1_flexure_assumptions",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "38.1",
+    "page": 69,
+    "title": "Assumptions for the limit state of collapse in flexure",
+    "text": "Design for the limit state of collapse in flexure rests on six assumptions taken together. (a) Plane sections normal to the member axis remain plane after bending — strain therefore varies linearly through the depth. (b) The maximum compressive strain in concrete at the outermost compression fibre is 0.0035 in bending. (c) The relationship between compressive stress and strain in concrete may be modelled as a rectangle, trapezoid, parabola, or any other shape that gives strength predictions in substantial agreement with test results; the parabolic-rectangular curve of Fig 21 is one acceptable choice. The design compressive strength is taken as 0.67·fck and the partial safety factor γm = 1.5 is applied in addition. The NOTE under 38.1(c) summarises the resulting design stress block (Fig 22): the resultant compressive force is 0.36·fck·xu·b and acts at 0.42·xu measured from the extreme compression fibre, where xu is the depth of the neutral axis. (d) The tensile strength of concrete is ignored. (e) Stresses in the reinforcement are derived from the steel's representative stress-strain curve — Fig 23 gives typical curves for cold-worked deformed bars (23A) and for steel with a definite yield point (23B); the partial safety factor γm = 1.15 applies. (f) The strain in the tension reinforcement at the section at failure must not be less than fy/(1.15·Es) + 0.002. This lower bound on tensile strain is what makes the section under-reinforced (steel-controlled) and ensures the steel yields before the concrete crushes. The limiting depths of neutral axis xu,max/d implied by these assumptions for fy = 250, 415, 500 N/mm² are tabulated in the trailing NOTE (encoded as a separate synthetic table). Moment-of-resistance expressions for rectangular and T-sections derived from these assumptions are given in Annex G of the code.",
+    "formula_nl_summary": "Six assumptions for flexural limit-state design: plane sections, εcu = 0.0035 in bending, parabolic-rectangular concrete with peak design stress 0.67·fck/γm and γm = 1.5 (giving stress-block resultant 0.36·fck·xu at lever arm 0.42·xu), zero concrete tensile strength, steel stress from its σ-ε curve with γm = 1.15, and minimum tension-steel strain at failure of fy/(1.15·Es) + 0.002.",
+    "formula_latex": "\\varepsilon_{t,\\min} = \\frac{f_y}{1.15\\,E_s} + 0.002",
+    "tags": [
+      "flexure",
+      "limit-state",
+      "flexure-assumption",
+      "stress-block",
+      "neutral-axis",
+      "tension-reinforcement",
+      "partial-safety-factor"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "table_38_1_xu_max_d_ratio",
+      "fig_21_concrete_stress_strain",
+      "fig_22_stress_block",
+      "fig_23_steel_stress_strain",
+      "cl_39_1_compression_assumptions",
+      "cl_41_4_2_torsion_longitudinal_reinforcement"
+    ]
+  },
+  {
+    "id": "fig_21_concrete_stress_strain",
+    "content_type": "graph",
+    "code": "IS 456:2000",
+    "clause": "38.1",
+    "page": 69,
+    "figure_number": "21",
+    "figure_subtype": "concrete_stress_strain",
+    "title": "Stress-strain curve for concrete (limit state design)",
+    "caption": "Parabolic-rectangular stress-strain relationship for concrete in flexural compression. Two curves are shown on the same axes: an upper characteristic curve peaking at 0.67·fck, and a lower design curve peaking at 0.67·fck/γm with γm = 1.5 (so the design peak is 0.67·fck/1.5 = 0.446·fck). Both curves rise parabolically from the origin to their respective peaks at strain 0.002, then sit on a horizontal plateau out to the ultimate compressive strain 0.0035 specified by 38.1(b). Integrating the design curve over the compression zone of depth xu yields the rectangular stress block of Fig 22 — resultant force 0.36·fck·xu·b acting at 0.42·xu from the extreme compression fibre — as stated in the NOTE under 38.1(c).",
+    "axes": {
+      "x": {
+        "label": "Strain ε",
+        "unit": "dimensionless",
+        "range": [
+          0.0,
+          0.0035
+        ]
+      },
+      "y": {
+        "label": "Compressive stress",
+        "unit": "N/mm²"
+      }
+    },
+    "curves": [
+      {
+        "name": "Characteristic curve (γm = 1)",
+        "form": "closed_form_piecewise",
+        "segments": [
+          {
+            "domain_strain": [
+              0.0,
+              0.002
+            ],
+            "expression_latex": "\\sigma_c = 0.67\\,f_{ck}\\left[\\,2\\!\\left(\\frac{\\varepsilon}{0.002}\\right) - \\left(\\frac{\\varepsilon}{0.002}\\right)^{\\!2}\\,\\right]",
+            "description": "Parabolic rise from origin to peak 0.67·fck at strain 0.002."
+          },
+          {
+            "domain_strain": [
+              0.002,
+              0.0035
+            ],
+            "expression_latex": "\\sigma_c = 0.67\\,f_{ck}",
+            "description": "Constant plateau at 0.67·fck from strain 0.002 to ultimate strain 0.0035."
+          }
+        ]
+      },
+      {
+        "name": "Design curve (γm = 1.5)",
+        "form": "closed_form_piecewise",
+        "segments": [
+          {
+            "domain_strain": [
+              0.0,
+              0.002
+            ],
+            "expression_latex": "\\sigma_c = \\frac{0.67\\,f_{ck}}{\\gamma_m}\\left[\\,2\\!\\left(\\frac{\\varepsilon}{0.002}\\right) - \\left(\\frac{\\varepsilon}{0.002}\\right)^{\\!2}\\,\\right]",
+            "description": "Parabolic rise from origin to design peak 0.67·fck/γm = 0.446·fck at strain 0.002 (with γm = 1.5)."
+          },
+          {
+            "domain_strain": [
+              0.002,
+              0.0035
+            ],
+            "expression_latex": "\\sigma_c = \\frac{0.67\\,f_{ck}}{\\gamma_m}",
+            "description": "Constant plateau at 0.67·fck/γm from strain 0.002 to ultimate strain 0.0035."
+          }
+        ]
+      }
+    ],
+    "auxiliary_data": {
+      "stress_block_consequences": {
+        "resultant_force_per_unit_width_latex": "C = 0.36\\,f_{ck}\\,x_u",
+        "lever_arm_from_compression_fibre_latex": "\\bar{y} = 0.42\\,x_u",
+        "note": "0.36 and 0.42 are integration factors of the design curve over a compression zone of depth xu, with linear strain distribution reaching 0.0035 at the extreme fibre. They are the standard IS 456 stress-block parameters quoted in the NOTE under 38.1(c) and labelled in Fig 22."
+      }
+    },
+    "digitisation_status": "exact_from_standard",
+    "image_url": null,
+    "nl_caption": "Closed-form parabolic-rectangular concrete stress-strain curve used in flexural limit-state design. The design curve rises parabolically from the origin to peak 0.67·fck/γm (with γm = 1.5) at strain 0.002, then stays constant up to the ultimate strain 0.0035. Integrating over the compression zone gives the standard IS 456 rectangular stress-block resultant 0.36·fck·xu acting at 0.42·xu from the extreme compression fibre.",
+    "tags": [
+      "stress-strain",
+      "concrete-strength",
+      "flexure",
+      "stress-block",
+      "graph"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_38_1_flexure_assumptions",
+      "fig_22_stress_block"
+    ]
+  },
+  {
+    "id": "fig_22_stress_block",
+    "content_type": "figure",
+    "code": "IS 456:2000",
+    "clause": "38.1",
+    "page": 69,
+    "figure_number": "22",
+    "figure_subtype": "stress_block_diagram",
+    "title": "Stress block parameters",
+    "nl_caption": "Schematic of the equivalent rectangular stress block used in limit-state flexural design. The diagram shows a beam compression zone of depth xu measured from the extreme compression fibre to the neutral axis, with two parameters labelled: a uniform design stress of 0.36·fck distributed over the depth xu (so the resultant compressive force per unit beam width is 0.36·fck·xu, and for a section of width b it is C = 0.36·fck·xu·b), and the line of action of that resultant located at 0.42·xu measured downward from the extreme compression fibre. These two values are the integrated form of the parabolic-rectangular concrete curve in Fig 21 and are stated explicitly in the NOTE under 38.1(c). Together with the under-reinforced condition from 38.1(f) and the tabulated xu,max/d limits, they feed the moment-of-resistance derivations for rectangular and T-sections in Annex G.",
+    "image_url": null,
+    "tags": [
+      "stress-block",
+      "flexure",
+      "neutral-axis",
+      "limit-state",
+      "figure"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_38_1_flexure_assumptions",
+      "fig_21_concrete_stress_strain"
+    ]
+  },
+  {
+    "id": "fig_23_steel_stress_strain",
+    "content_type": "graph",
+    "code": "IS 456:2000",
+    "clause": "38.1",
+    "page": 70,
+    "figure_number": "23",
+    "figure_subtype": "steel_stress_strain",
+    "title": "Representative stress-strain curves for reinforcement",
+    "caption": "Two representative steel stress-strain curves underpinning 38.1(e), each with modulus of elasticity Es = 200000 N/mm² annotated directly on the figure. Sub-figure 23A shows the curve for a cold-worked deformed bar (e.g. Fe 415 or Fe 500 conforming to IS 1786): linear-elastic up to a stress of 0.80·fy, then a series of calibrated points marking gradual yielding at 0.85·fy, 0.90·fy, 0.95·fy, 0.975·fy, and 1.000·fy with inelastic-strain offsets of 0.0001, 0.0003, 0.0007, 0.0010, and 0.0020 respectively (linear interpolation between successive calibration points), then a horizontal plateau at fy. Sub-figure 23B shows the curve for mild steel with a definite yield point (e.g. Fe 250): linear-elastic up to fy at strain fy/Es, then a horizontal plateau. For design, the partial safety factor γm = 1.15 reduces every stress in both curves by a factor of 1/1.15, so the design yield is fy/1.15 ≈ 0.87·fy — this is the recurring 0.87·fy multiplier that appears throughout the limit-state shear, torsion, and reinforcement-strength formulas in Sections 40 and 41.",
+    "axes": {
+      "x": {
+        "label": "Strain ε",
+        "unit": "dimensionless"
+      },
+      "y": {
+        "label": "Stress σ",
+        "unit": "N/mm²"
+      }
+    },
+    "curves": [
+      {
+        "name": "23A — Cold-worked deformed bar (characteristic curve)",
+        "form": "calibrated_piecewise_linear",
+        "modulus_elasticity_n_per_mm2": 200000,
+        "elastic_limit_stress_ratio_to_fy": 0.8,
+        "key_points": [
+          {
+            "stress_ratio_to_fy": 0.8,
+            "inelastic_strain_offset": 0.0,
+            "total_strain_latex": "0.80\\,f_y / E_s"
+          },
+          {
+            "stress_ratio_to_fy": 0.85,
+            "inelastic_strain_offset": 0.0001,
+            "total_strain_latex": "0.85\\,f_y / E_s + 0.0001"
+          },
+          {
+            "stress_ratio_to_fy": 0.9,
+            "inelastic_strain_offset": 0.0003,
+            "total_strain_latex": "0.90\\,f_y / E_s + 0.0003"
+          },
+          {
+            "stress_ratio_to_fy": 0.95,
+            "inelastic_strain_offset": 0.0007,
+            "total_strain_latex": "0.95\\,f_y / E_s + 0.0007"
+          },
+          {
+            "stress_ratio_to_fy": 0.975,
+            "inelastic_strain_offset": 0.001,
+            "total_strain_latex": "0.975\\,f_y / E_s + 0.0010"
+          },
+          {
+            "stress_ratio_to_fy": 1.0,
+            "inelastic_strain_offset": 0.002,
+            "total_strain_latex": "f_y / E_s + 0.0020"
+          }
+        ],
+        "interpolation": "Linear between successive key points. Between origin and the 0.80·fy point the curve is purely linear-elastic with slope Es; beyond the 1.000·fy point the curve sits on a horizontal plateau at fy.",
+        "total_strain_formula_latex": "\\varepsilon = \\frac{\\sigma}{E_s} + \\varepsilon_{\\text{inelastic}}(\\sigma)"
+      },
+      {
+        "name": "23B — Steel bar with definite yield point (characteristic curve)",
+        "form": "bilinear_closed_form",
+        "modulus_elasticity_n_per_mm2": 200000,
+        "segments": [
+          {
+            "domain_strain_latex": "[\\,0,\\; f_y / E_s\\,]",
+            "expression_latex": "\\sigma = E_s \\cdot \\varepsilon",
+            "description": "Linear-elastic with slope Es = 200000 N/mm² up to yield at strain fy/Es."
+          },
+          {
+            "domain_strain_latex": "[\\,f_y / E_s,\\; \\infty)",
+            "expression_latex": "\\sigma = f_y",
+            "description": "Horizontal plateau at fy beyond the yield point."
+          }
+        ]
+      }
+    ],
+    "auxiliary_data": {
+      "design_curve_note": "The curves above are characteristic. The IS 456 design curves are obtained by dividing every stress by the partial safety factor γm = 1.15. The design yield stress is therefore fy/1.15 ≈ 0.87·fy — this is the origin of the 0.87·fy factor used throughout Sections 40 and 41 (e.g. in the shear-reinforcement Vus = 0.87·fy·Asv·d/sv and in the torsion equations of 41.4.3)."
+    },
+    "digitisation_status": "exact_from_standard",
+    "image_url": null,
+    "nl_caption": "Two representative reinforcement stress-strain curves with Es = 200000 N/mm². 23A — cold-worked deformed bar — has six calibration points at stress ratios 0.80, 0.85, 0.90, 0.95, 0.975, 1.000·fy with inelastic strain offsets 0.0000, 0.0001, 0.0003, 0.0007, 0.0010, 0.0020 and linear interpolation between, with a horizontal plateau at fy beyond. 23B — mild steel — is a bilinear closed-form curve: linear with slope Es up to fy/Es, then plateau at fy. The design partial safety factor γm = 1.15 reduces all design stresses to fy/1.15 = 0.87·fy.",
+    "tags": [
+      "stress-strain",
+      "mild-steel",
+      "deformed-bar",
+      "partial-safety-factor",
+      "graph"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_38_1_flexure_assumptions"
+    ]
+  },
+  {
+    "id": "table_38_1_xu_max_d_ratio",
     "content_type": "table",
-    "code": "IS 6403:1981",
-    "clause": "5.1.2.1",
-    "page": 8,
-    "table_number": "2",
-    "caption": "Shape factors sc, sq, s_gamma for different footing shapes.",
+    "code": "IS 456:2000",
+    "clause": "38.1",
+    "page": 70,
+    "table_number": "38.1-xu-max-d",
+    "caption": "Limiting depth of neutral axis xu,max/d at the balanced section for the limit state of collapse in flexure, by characteristic strength of steel fy. Embedded in the NOTE following clause 38.1; not numbered as a 'Table N' in IS 456.",
     "headers": [
-      "Shape",
-      "sc",
-      "sq",
-      "s_gamma"
+      "fy (N/mm²)",
+      "xu,max / d"
     ],
     "rows": [
       [
-        "Continuous strip",
+        "250",
+        "0.53"
+      ],
+      [
+        "415",
+        "0.48"
+      ],
+      [
+        "500",
+        "0.46"
+      ]
+    ],
+    "note": "These values are derived directly from the assumptions of 38.1, in particular 38.1(b) (concrete strain at the extreme compression fibre = 0.0035) and 38.1(f) (minimum tension-steel strain at failure = fy/(1.15·Es) + 0.002). At xu = xu,max the section is balanced — concrete reaches strain 0.0035 at the same instant the tension steel reaches its minimum failure strain. Sections with xu < xu,max·d are under-reinforced (ductile, steel-controlled). Sections with xu > xu,max·d are over-reinforced and not permitted by limit state design without additional compression steel.",
+    "nl_summary": "Limiting neutral-axis depth ratio xu,max/d that defines the balanced section, indexed by steel grade: 0.53 for fy = 250 N/mm², 0.48 for fy = 415 N/mm², 0.46 for fy = 500 N/mm². A flexural section is under-reinforced when xu < xu,max·d. Drives moment-of-resistance calculations per Annex G and the doubly-reinforced-beam check.",
+    "tags": [
+      "neutral-axis",
+      "balanced-section",
+      "flexure",
+      "limit-state",
+      "table"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_38_1_flexure_assumptions"
+    ]
+  },
+  {
+    "id": "cl_39_1_compression_assumptions",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.1",
+    "page": 70,
+    "title": "Assumptions for the limit state of collapse in compression",
+    "text": "For the limit state of collapse in compression, the assumptions of 38.1(a) to 38.1(e) — plane sections, the parabolic-rectangular concrete stress-strain curve with γm = 1.5, zero concrete tensile strength, and steel stresses derived from the σ-ε curve of Fig 23 with γm = 1.15 — apply unchanged. To these, 39.1 adds two limits on the maximum compressive concrete strain that depend on the strain distribution across the section. (a) For a member under pure axial compression with uniform strain across the section, the maximum compressive strain in concrete is taken as 0.002 — significantly lower than the bending value of 0.0035 in 38.1(b). The reduction reflects the absence of strain gradient: with no part of the section less compressed, there is no strain-redistribution mechanism and the concrete fails earlier. (b) For a member under combined axial compression and bending where the section remains entirely in compression (no tensile strain anywhere through the depth), the maximum compressive strain at the most-compressed extreme fibre is given by 0.0035 minus 0.75 times the strain at the least-compressed extreme fibre. This rule produces a smooth transition between the two limiting cases of pure bending and pure axial: when the strain at the least-compressed fibre approaches zero (the neutral axis is just at the far face, on the verge of tension forming) the rule gives a maximum strain of 0.0035, matching pure bending; when the strain at the least-compressed fibre approaches the maximum strain itself (uniform strain, pure axial) the rule gives 0.0035/(1 + 0.75) = 0.002, matching 39.1(a). Note that 38.1(f) — the under-reinforced tension-strain bound — does not apply when there is no tension on the section, since there is no tension reinforcement to govern.",
+    "formula_nl_summary": "Adds two strain limits to 38.1's flexural assumptions, used for compression-member design. Pure axial compression (uniform strain): εcu = 0.002. Combined axial compression and bending with no tensile strain anywhere on the section: εcu at the most-compressed fibre = 0.0035 − 0.75·ε_least, where ε_least is the strain at the least-compressed fibre. The rule interpolates smoothly between 0.0035 (pure bending) and 0.002 (pure axial).",
+    "formula_latex": "\\varepsilon_{cu,\\max} = 0.0035 - 0.75\\,\\varepsilon_{cu,\\min} \\quad \\text{(when no tension on section)}",
+    "tags": [
+      "compression",
+      "limit-state",
+      "compression-assumption",
+      "axial-compression",
+      "neutral-axis"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_38_1_flexure_assumptions",
+      "cl_39_3_short_axial_compression",
+      "cl_39_4_helical_columns",
+      "cl_39_5_uniaxial_bending",
+      "cl_39_6_biaxial_bending"
+    ]
+  },
+  {
+    "id": "cl_39_2_minimum_eccentricity",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.2",
+    "page": 70,
+    "title": "Minimum eccentricity for compression members",
+    "text": "Every compression member must be designed for at least the minimum eccentricity given by clause 25.4 of this code. Where the eccentricity calculated from analysis of the structure (from the moments and axial loads in the compression member) is larger than the 25.4 minimum, the minimum-eccentricity provision is satisfied automatically and may be ignored. The rule sets a floor on the bending-moment input to compression-member design, so that small unintended moments arising from construction tolerances, slight asymmetry of loading, or geometric imperfections are accounted for even when the calculated eccentricity is nominally zero. The 25.4 floor is what triggers the e_min ≤ 0.05·D simplification used in 39.3 — the simple short-column axial-load equation Pu = 0.4·fck·Ac + 0.67·fy·Asc applies only when the actual minimum eccentricity is at most five percent of the lateral dimension. The 25.4 numerical formula for the minimum eccentricity is not reproduced here; consumers of this clause should fetch it from clause 25.4 directly.",
+    "formula_nl_summary": "Compression members must satisfy the minimum-eccentricity floor of clause 25.4. If the eccentricity from structural analysis exceeds the 25.4 minimum, that minimum is implicitly met and need not be separately checked. The 25.4 floor is the gate condition for the simplified short-column formula in 39.3.",
+    "tags": [
+      "compression",
+      "column",
+      "axial-compression",
+      "eccentricity",
+      "min-eccentricity"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_39_3_short_axial_compression",
+      "cl_39_5_uniaxial_bending",
+      "cl_39_6_biaxial_bending"
+    ]
+  },
+  {
+    "id": "cl_39_3_short_axial_compression",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.3",
+    "page": 71,
+    "title": "Short axially loaded members in compression",
+    "text": "Short columns subjected to axial load only — strictly, where the minimum eccentricity from clause 25.4 does not exceed five percent of the lateral dimension (e_min ≤ 0.05·D) — may be designed using the strain assumptions of 39.1 together with a single capacity equation that adds the contributions of concrete and longitudinal compression steel: Pu = 0.4·fck·Ac + 0.67·fy·Asc. Here Pu is the axial load on the member; fck is the characteristic compressive strength of the concrete; Ac is the area of concrete (gross cross-section minus longitudinal-steel area); fy is the characteristic strength of the compression reinforcement; and Asc is the area of longitudinal reinforcement in the column. The factors 0.4 and 0.67 already embed the relevant material partial safety factors and an implicit allowance for the 0.05·D moment effect — the 0.4 figure is approximately 0.67/1.5 = 0.446 reduced by a further ten percent or so to account for the assumed minimum eccentricity, while the 0.67 on steel is the design yield 0.87·fy reduced from full yield because the steel cannot strain past 0.002 (the εcu in pure axial per 39.1(a)) and 0.002 × Es = 400 N/mm² is below 0.87 × 500 = 435 N/mm² for Fe 500 grade. When the actual minimum eccentricity exceeds 0.05·D, this short-form equation no longer applies and the column must be designed as a member subjected to combined axial load and uniaxial bending per 39.5.",
+    "formula_nl_summary": "Short-column axial-load capacity, valid only when e_min ≤ 0.05·D: Pu = 0.4·fck·Ac + 0.67·fy·Asc. Concrete and longitudinal-steel contributions added; the 0.4 and 0.67 coefficients embed γm and an implicit allowance for the small minimum eccentricity. Outside e_min ≤ 0.05·D, design as combined axial+bending per 39.5.",
+    "formula_latex": "P_u = 0.4\\,f_{ck}\\,A_c + 0.67\\,f_y\\,A_{sc}",
+    "tags": [
+      "compression",
+      "column",
+      "axial-compression",
+      "short-column",
+      "longitudinal-reinforcement",
+      "eccentricity"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_39_1_compression_assumptions",
+      "cl_39_2_minimum_eccentricity",
+      "cl_39_4_helical_columns",
+      "cl_39_5_uniaxial_bending"
+    ]
+  },
+  {
+    "id": "cl_39_4_helical_columns",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.4",
+    "page": 71,
+    "title": "Compression members with helical reinforcement",
+    "text": "For compression members with helical (spiral) transverse reinforcement that meets the volumetric-ratio requirement of 39.4.1, the design axial-load capacity may be taken as 1.05 times the capacity of an otherwise identical column with rectangular lateral ties. The five-percent uplift reflects the confinement enhancement that a continuous helix provides to the core concrete, increasing its effective strength and ductility relative to discrete tied confinement.\n\nPer 39.4.1, the volumetric ratio of helical reinforcement to the column core (where the core is measured to the outside diameter of the helix, not the inside) must satisfy ρ_helix ≥ 0.36·(Ag/Ac − 1)·fck/fy, in which Ag is the gross cross-sectional area, Ac is the core area inside the helix, fck is the characteristic concrete strength, and fy is the characteristic strength of the helical steel — capped at 415 N/mm² for the purposes of this expression regardless of the actual grade used. So even with Fe 500 helical wire, the design value of fy in this expression is taken as 415. The 415 cap prevents over-thinning of the helix when high-grade wire is specified, since the confinement physics depends more on the geometric volumetric ratio than on raw yield strength alone — once the helix yields, additional strength is irrelevant. If the volumetric ratio falls below this floor, the 1.05 strength bonus does not apply and the column must be designed as a tied column.",
+    "formula_nl_summary": "Helical (spiral) columns get a 1.05× axial capacity bonus over equivalent tied columns when the helical reinforcement satisfies the volumetric-ratio floor ρ_helix ≥ 0.36·(Ag/Ac − 1)·fck/fy, with fy capped at 415 N/mm². Below this volumetric ratio, the column is designed as a tied column without the 5% bonus.",
+    "formula_latex": "\\rho_{\\text{helix}} \\geq 0.36\\!\\left(\\frac{A_g}{A_c} - 1\\right)\\!\\frac{f_{ck}}{f_y}, \\quad f_y \\leq 415\\ \\text{N/mm}^2",
+    "tags": [
+      "helical",
+      "spiral",
+      "column",
+      "axial-compression",
+      "transverse-reinforcement",
+      "compression"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_39_1_compression_assumptions",
+      "cl_39_3_short_axial_compression"
+    ]
+  },
+  {
+    "id": "cl_39_5_uniaxial_bending",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.5",
+    "page": 71,
+    "title": "Members subjected to combined axial load and uniaxial bending",
+    "text": "A column subjected to axial force combined with bending about a single axis is designed on the basis of the strain assumptions of 39.1 (which incorporate 38.1(a) to 38.1(e)) together with the minimum-eccentricity floor of 39.2. The neutral-axis depth is selected so that equilibrium of the axial load and the bending moment about the design axis is satisfied simultaneously. The section's P-M capacity envelope is constructed by integrating the design stress block of 38.1(c) and Fig 21 over the compression zone, and the steel σ-ε of 38.1(e) and Fig 23 over each rebar layer, sweeping the neutral-axis depth from \"section fully in compression\" (corresponding to Puz, the squash load) through the balanced position (Pb, where concrete reaches εcu = 0.0035 simultaneously with the outermost tension steel reaching strain 0.002) down to deep neutral axes with substantial tension strain. The NOTE attached to this clause acknowledges that this trial-and-error sweep is laborious in practice and points to BIS publication SP:16, 'Design Aids for Reinforced Concrete to IS 456', which contains pre-computed P-M interaction diagrams that allow the designer to read off the required reinforcement directly for standard rectangular and circular sections.",
+    "formula_nl_summary": "Combined axial+uniaxial-bending columns are designed by satisfying both the strain assumptions of 39.1 and the minimum-eccentricity floor of 39.2. The P-M capacity envelope is found by trial-and-error integration of the 38.1 stress block and steel σ-ε at varying neutral-axis depths; SP:16 interaction diagrams give pre-computed results for standard sections.",
+    "tags": [
+      "column",
+      "compression",
+      "axial-compression",
+      "uniaxial-bending",
+      "longitudinal-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_39_1_compression_assumptions",
+      "cl_39_2_minimum_eccentricity",
+      "cl_39_3_short_axial_compression",
+      "cl_39_6_biaxial_bending",
+      "cl_39_7_slender_additional_moment"
+    ]
+  },
+  {
+    "id": "cl_39_6_biaxial_bending",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.6",
+    "page": 71,
+    "title": "Members subjected to combined axial load and biaxial bending",
+    "text": "Columns under axial force combined with bending about both major and minor axes — biaxial bending — may be designed by either of two methods. The rigorous method selects a neutral-axis orientation and depth such that equilibrium of axial load and the two moments about the principal axes is satisfied simultaneously, using the strain assumptions of 39.1 together with the minimum-eccentricity floor of 39.2. The approximate method uses the Bresler-style interaction equation given below: (Mux/Mux1)^αn + (Muy/Muy1)^αn ≤ 1.0. In this expression, Mux and Muy are the design moments about the x and y axes due to the design loads; Mux1 and Muy1 are the maximum uniaxial moment capacities at the same axial load Pu, taken about the x and y axes respectively (each obtained from a 39.5-style integration with bending about a single axis); and αn is an exponent that depends on the load ratio Pu/Puz, where Puz is the pure-compression axial capacity defined in this clause as Puz = 0.45·fck·Ac + 0.75·fy·Asc. Note that the coefficients in Puz are 0.45 and 0.75 — distinctly NOT the 0.4 and 0.67 of the 39.3 short-column formula. The difference is intentional: 39.3 already embeds an allowance for the e_min ≤ 0.05·D moment effect, whereas Puz is the unrelieved pure-axial-compression capacity used as a normalising reference for the αn schedule. The αn schedule is piecewise: αn = 1.0 for Pu/Puz ≤ 0.2 (axial-light, the interaction is essentially a linear sum of moment ratios); αn = 2.0 for Pu/Puz ≥ 0.8 (axial-heavy, the interaction surface is convex, allowing more biaxial moment); and αn varies linearly from 1.0 to 2.0 as Pu/Puz varies from 0.2 to 0.8 (so αn = 1.0 + (5/3)·(Pu/Puz − 0.2) in the linear range). The two limits reflect the differing failure mechanisms at the two ends of the axial range.",
+    "formula_nl_summary": "Biaxial-bending columns may be designed rigorously (39.1 + 39.2 with neutral axis chosen to satisfy three equilibria simultaneously) or by the Bresler-style interaction (Mux/Mux1)^αn + (Muy/Muy1)^αn ≤ 1.0. Exponent αn varies with axial-load ratio Pu/Puz: αn = 1.0 for Pu/Puz ≤ 0.2, αn = 2.0 for Pu/Puz ≥ 0.8, linearly from 1.0 to 2.0 in between. Pure-compression reference capacity Puz = 0.45·fck·Ac + 0.75·fy·Asc — distinct from the 0.4/0.67 coefficients of 39.3.",
+    "formula_latex": "\\left(\\frac{M_{ux}}{M_{ux1}}\\right)^{\\!\\alpha_n} + \\left(\\frac{M_{uy}}{M_{uy1}}\\right)^{\\!\\alpha_n} \\leq 1.0",
+    "tags": [
+      "column",
+      "compression",
+      "biaxial-bending",
+      "axial-compression",
+      "interaction-equation",
+      "longitudinal-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_39_1_compression_assumptions",
+      "cl_39_2_minimum_eccentricity",
+      "cl_39_5_uniaxial_bending",
+      "cl_39_7_slender_additional_moment",
+      "cl_39_7_1_1_k_modification_factor"
+    ]
+  },
+  {
+    "id": "cl_39_7_slender_additional_moment",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.7",
+    "page": 71,
+    "title": "Slender compression members — additional moment from second-order effects",
+    "text": "For slender compression members — those classified as slender per the limits in 25.1.1 — design must be based on the forces and moments determined from a structural analysis that includes the effect of P-Δ deflections on moments and forces. Where a rigorous second-order analysis is not performed, this clause provides a simplified method: compute an additional moment about each principal axis from the formulae of 39.7.1, and superpose it on the first-order moments before designing the section. About the major axis: Max = (Pu·D/2000)·(lex/D)². About the minor axis: May = (Pu·b/2000)·(ley/b)². Here Pu is the axial load on the member; lex and ley are the effective lengths in respect of the major and minor axes; D is the depth of the cross-section measured at right angles to the major axis; and b is the width of the member. The 1/2000 coefficient encodes the assumed eccentricity-amplification due to slenderness, and the (lex/D)² and (ley/b)² scaling with squared slenderness ratio is consistent with elastic-buckling intuition. Once the additional moment is determined (and optionally reduced by the modification factor of 39.7.1.1), the section is designed by 39.5 (uniaxial bending) or 39.6 (biaxial bending) as appropriate, with the total moment at the design section being the sum of the first-order moment and the additional moment.\n\nThree NOTES qualify how the additional moment is applied. NOTE 1: a column may be considered braced in a given plane if walls, bracing, or buttressing in that plane are designed to resist all lateral forces in that plane — otherwise it is considered unbraced. NOTE 2: for a braced column without any transverse loads occurring in its height, the additional moment is added to an initial moment computed as the weighted sum 0.4·Mu1 + 0.6·Mu2, where Mu2 is the larger end moment and Mu1 is the smaller end moment (with Mu1 taken negative if the column is bent in double curvature). Two floors apply to the result: the initial moment must not be less than 0.4·Mu2, and the total moment (initial plus additional) must not be less than Mu2. For unbraced columns, the additional moment is added directly to the end moments without going through the 0.4·Mu1 + 0.6·Mu2 weighting. NOTE 3: in unbraced compression members at any given level or storey, columns subjected to lateral load are usually constrained to deflect equally; in such cases the slenderness ratio for each column may be taken as the average for all columns acting in the same direction.",
+    "formula_nl_summary": "Simplified second-order moments for slender columns: Max = (Pu·D/2000)·(lex/D)² about the major axis, May = (Pu·b/2000)·(ley/b)² about the minor axis. Add to first-order moments, then design per 39.5 or 39.6. For braced columns without transverse load: initial moment = max(0.4·Mu1 + 0.6·Mu2, 0.4·Mu2), where Mu1 is negative for double curvature; total moment ≥ Mu2. For unbraced columns: add directly to end moments. May be reduced by k from 39.7.1.1.",
+    "formula_latex": "M_{ax} = \\frac{P_u\\,D}{2000}\\!\\left(\\frac{l_{ex}}{D}\\right)^{\\!2}, \\qquad M_{ay} = \\frac{P_u\\,b}{2000}\\!\\left(\\frac{l_{ey}}{b}\\right)^{\\!2}",
+    "tags": [
+      "column",
+      "slender-column",
+      "additional-moment",
+      "axial-compression",
+      "effective-length"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_39_5_uniaxial_bending",
+      "cl_39_6_biaxial_bending",
+      "cl_39_7_1_1_k_modification_factor"
+    ]
+  },
+  {
+    "id": "cl_39_7_1_1_k_modification_factor",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "39.7.1.1",
+    "page": 72,
+    "title": "Modification factor k for slender-column additional moment",
+    "text": "The slender-column additional moments computed by 39.7.1 may be reduced by a modification factor k to account for where the column actually sits on its P-M interaction envelope: k = (Puz − Pu)/(Puz − Pb), with the cap k ≤ 1. The factor varies between two reference axial loads. Puz is the pure-compression squash capacity, Puz = 0.45·fck·Ac + 0.75·fy·Asc, as defined in 39.6. Pb is the balanced axial load — the axial force at which the section reaches simultaneously a concrete strain of 0.0035 at the extreme compression fibre and a tensile strain of 0.002 in the outermost layer of tension steel; this is the strain combination that defines the balanced point in the P-M envelope and corresponds to the limiting xu,max/d ratios tabulated under 38.1.\n\nPhysically, when Pu approaches Puz the column is in pure compression and the moment-of-resistance has been exhausted, so the formula gives k → 0 — there is little point amplifying additional flexure on a column that cannot carry any. When Pu equals Pb the column is at balanced failure, where ductility and capacity for additional moment are maximum, so k = 1 — the additional moment applies in full. For Pu between Pb and Puz, k linearly interpolates between 1 and 0. For Pu < Pb (the tension-controlled regime), the algebraic formula yields k > 1, but the cap k ≤ 1 prevents amplification — the additional moment is simply taken at face value. The reduction is conservative: it shrinks the slender correction the closer the column is to its squash load, where ductility is exhausted. The reduced additional moment (k·Max or k·May) is then used in 39.5 or 39.6 as appropriate.",
+    "formula_nl_summary": "Modification factor for slender-column additional moments: k = (Puz − Pu)/(Puz − Pb), capped at 1. Multiplies the Max and May from 39.7.1 to account for the column's position relative to balanced (Pb) and squash (Puz) loads. k = 1 at the balanced point; k → 0 at the squash load; cap prevents k > 1 in the tension-controlled regime where the formula would otherwise amplify the additional moment.",
+    "formula_latex": "k = \\frac{P_{uz} - P_u}{P_{uz} - P_b} \\leq 1",
+    "tags": [
+      "column",
+      "slender-column",
+      "additional-moment",
+      "axial-compression",
+      "balanced-section"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_39_6_biaxial_bending",
+      "cl_39_7_slender_additional_moment"
+    ]
+  },
+  {
+    "id": "cl_40_1_nominal_shear_stress",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.1",
+    "page": 72,
+    "title": "Nominal shear stress in beams (uniform and varying depth)",
+    "text": "For beams of uniform depth, the nominal shear stress used in all subsequent shear and shear-with-torsion checks is τv = Vu / (b·d), where Vu is the shear force from design loads, b is the breadth of the member (taken as bw, the breadth of the web, for flanged sections), and d is the effective depth.\n\n40.1.1 modifies this for beams of varying depth: τv = (Vu ± Mu·tanβ/d) / (b·d), where Mu is the bending moment at the section and β is the angle between the top and bottom edges of the beam. The sign convention is critical and easy to get wrong. The negative sign applies when the bending moment Mu increases numerically in the same direction as the effective depth d increases — the inclined compression face is then oriented so that its vertical component opposes the applied shear, and the geometry helps. The positive sign applies when Mu decreases numerically in the direction of increasing d — the inclined face's vertical component then adds to the applied shear, and the geometry hurts. The varying-depth correction matters most in haunched beams, sloped slabs, and tapered cantilevers where the effective depth changes substantially along the member length. Once τv is computed (from either form), it feeds into 40.2 (the τc and τc,max comparisons), 40.3 (minimum reinforcement when τv < τc) and 40.4 (designed reinforcement when τv > τc) without further modification.",
+    "formula_nl_summary": "Nominal shear stress in beams: τv = Vu/(b·d) for uniform depth, τv = (Vu ± Mu·tanβ/d)/(b·d) for varying depth. b is bw for flanged sections. Sign convention for varying depth: negative when Mu increases in the same direction as d increases (geometry helps shear capacity), positive when Mu decreases as d increases (geometry hurts).",
+    "formula_latex": "\\tau_v = \\frac{V_u \\pm M_u \\tan\\beta / d}{b\\,d}",
+    "tags": [
+      "shear",
+      "nominal-shear-stress",
+      "beam",
+      "varying-depth",
+      "flanged-section"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_2_1_design_shear_strength_concrete",
+      "cl_40_2_3_max_shear_stress",
+      "cl_40_3_minimum_shear_reinforcement",
+      "cl_40_4_design_shear_reinforcement",
+      "cl_41_3_1_equivalent_shear"
+    ]
+  },
+  {
+    "id": "cl_40_2_1_design_shear_strength_concrete",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.2.1",
+    "page": 72,
+    "title": "Design shear strength of concrete — Table 19 lookup, with slab depth factor",
+    "text": "The design shear strength of concrete in beams without shear reinforcement is read from Table 19 as a function of two parameters: the longitudinal tension-reinforcement ratio 100·As/(b·d) (rows) and the concrete grade (columns, M15 through M40-and-above). The tabulated value is τc in N/mm². As is the area of longitudinal tension reinforcement that continues at least one effective depth beyond the section being considered; at supports, the full area of tension reinforcement may be counted provided the detailing follows clause 26.2.2 (anchorage of tension bars) and clause 26.2.3 (curtailment of tension reinforcement).\n\nFor solid slabs (the rule of 40.2.1.1), the design shear strength is enhanced by a depth-dependent multiplier k: the effective concrete shear strength is τc' = k·τc. Values of k are read from the inline depth-factor table that ranges from 1.00 for slabs with overall depth 300 mm or more, scaling up by 0.05 per 25 mm reduction in depth, to 1.30 for slabs 150 mm or less. Thinner slabs receive a stronger relative shear strength because shallow members behave better in shear per unit depth than thicker beams (a depth-effect benefit that is observed in tests but suppressed in beam design). The k factor applies only to solid slabs — flat slabs are explicitly excluded by the NOTE under 40.2.1.1 and use the punching-shear provisions of 31.6 instead.",
+    "formula_nl_summary": "Design shear strength of concrete τc (N/mm²) for beams without shear reinforcement is looked up in Table 19 by 100·As/(b·d) and concrete grade. As is longitudinal tension steel that extends ≥ d past the section (full area at supports if 26.2.2 and 26.2.3 are met). For solid slabs, multiply by depth factor k (from 1.00 at depth ≥ 300 mm up to 1.30 at depth ≤ 150 mm) to get τc' = k·τc. Flat slabs use 31.6 instead.",
+    "formula_latex": "\\tau_c' = k \\cdot \\tau_c \\quad (\\text{solid slabs only})",
+    "tags": [
+      "shear",
+      "shear-strength",
+      "concrete-grade",
+      "beam",
+      "slab",
+      "longitudinal-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "table_19_design_shear_strength_concrete",
+      "table_40_2_1_slab_depth_factor",
+      "cl_40_1_nominal_shear_stress",
+      "cl_40_2_2_axial_compression_factor",
+      "cl_40_2_3_max_shear_stress",
+      "cl_40_3_minimum_shear_reinforcement",
+      "cl_40_4_design_shear_reinforcement",
+      "cl_26_2_3_1_curtailment_extension"
+    ]
+  },
+  {
+    "id": "table_19_design_shear_strength_concrete",
+    "content_type": "table",
+    "code": "IS 456:2000",
+    "clause": "40.2.1",
+    "page": 73,
+    "table_number": "19",
+    "caption": "Design shear strength of concrete τc (N/mm²) for beams without shear reinforcement, indexed by longitudinal tension-reinforcement ratio 100·As/(b·d) (rows) and concrete grade (columns). Cross-referenced from clauses 40.2.1, 40.2.2, 40.3, 40.4, 40.5.3, 41.3.2, 41.3.3, and 41.4.3 — this is the foundation table for every shear and shear-with-torsion check in IS 456.",
+    "headers": [
+      "100·As / (b·d)",
+      "M15",
+      "M20",
+      "M25",
+      "M30",
+      "M35",
+      "M40 and above"
+    ],
+    "rows": [
+      [
+        "≤ 0.15",
+        "0.28",
+        "0.28",
+        "0.29",
+        "0.29",
+        "0.29",
+        "0.30"
+      ],
+      [
+        "0.25",
+        "0.35",
+        "0.36",
+        "0.36",
+        "0.37",
+        "0.37",
+        "0.38"
+      ],
+      [
+        "0.50",
+        "0.46",
+        "0.48",
+        "0.49",
+        "0.50",
+        "0.50",
+        "0.51"
+      ],
+      [
+        "0.75",
+        "0.54",
+        "0.56",
+        "0.57",
+        "0.59",
+        "0.59",
+        "0.60"
+      ],
+      [
         "1.00",
-        "1.00",
+        "0.60",
+        "0.62",
+        "0.64",
+        "0.66",
+        "0.67",
+        "0.68"
+      ],
+      [
+        "1.25",
+        "0.64",
+        "0.67",
+        "0.70",
+        "0.71",
+        "0.73",
+        "0.74"
+      ],
+      [
+        "1.50",
+        "0.68",
+        "0.72",
+        "0.74",
+        "0.76",
+        "0.78",
+        "0.79"
+      ],
+      [
+        "1.75",
+        "0.71",
+        "0.75",
+        "0.78",
+        "0.80",
+        "0.82",
+        "0.84"
+      ],
+      [
+        "2.00",
+        "0.71",
+        "0.79",
+        "0.82",
+        "0.84",
+        "0.86",
+        "0.88"
+      ],
+      [
+        "2.25",
+        "0.71",
+        "0.81",
+        "0.85",
+        "0.88",
+        "0.90",
+        "0.92"
+      ],
+      [
+        "2.50",
+        "0.71",
+        "0.82",
+        "0.88",
+        "0.91",
+        "0.93",
+        "0.95"
+      ],
+      [
+        "2.75",
+        "0.71",
+        "0.82",
+        "0.90",
+        "0.94",
+        "0.96",
+        "0.98"
+      ],
+      [
+        "3.00 and above",
+        "0.71",
+        "0.82",
+        "0.92",
+        "0.96",
+        "0.99",
+        "1.01"
+      ]
+    ],
+    "note": "As (longitudinal tension-reinforcement area) is the area of tension steel that continues at least one effective depth beyond the section being considered. At supports, the full area of tension reinforcement may be counted provided the detailing conforms to clause 26.2.2 (anchorage) and clause 26.2.3 (curtailment of tension reinforcement). Linear interpolation between tabulated rows for intermediate steel ratios is the standard design practice though not explicitly stated by IS 456. Two saturation patterns are visible in the printed table and worth flagging for rules-layer use: the M15 column saturates at 0.71 N/mm² for all ratios from 1.75 onward, and the M20 column saturates at 0.82 N/mm² for all ratios from 2.50 onward — these saturations reflect diminishing-returns behaviour at high reinforcement ratios for low concrete grades.",
+    "nl_summary": "Lookup table for the design shear strength τc of concrete (N/mm²) in beams without shear reinforcement. Entered with 100·As/(b·d) as the row and the concrete grade (M15 through M40-and-above) as the column. Foundation table for all shear and shear-with-torsion design checks in IS 456: cross-referenced from 40.2.1, 40.2.2, 40.3, 40.4, 40.5.3, 41.3.2, 41.3.3, and 41.4.3.",
+    "tags": [
+      "shear",
+      "shear-strength",
+      "concrete-grade",
+      "longitudinal-reinforcement",
+      "table"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_2_1_design_shear_strength_concrete",
+      "cl_40_2_2_axial_compression_factor",
+      "cl_40_3_minimum_shear_reinforcement",
+      "cl_40_4_design_shear_reinforcement",
+      "cl_40_5_3_simplified_enhanced_shear",
+      "cl_41_3_2_min_shear_for_torsion",
+      "cl_41_3_3_design_shear_for_torsion",
+      "cl_41_4_3_torsion_transverse_reinforcement",
+      "cl_26_2_3_1_curtailment_extension",
+      "table_40_2_1_slab_depth_factor",
+      "cl_40_5_1_general_enhanced_shear",
+      "cl_40_5_2_shear_reinforcement_close_to_supports"
+    ]
+  },
+  {
+    "id": "table_40_2_1_slab_depth_factor",
+    "content_type": "table",
+    "code": "IS 456:2000",
+    "clause": "40.2.1.1",
+    "page": 72,
+    "table_number": "40.2.1-slab-depth-factor",
+    "caption": "Solid-slab depth factor k that enhances the design shear strength of concrete τc for slabs without shear reinforcement: τc' = k·τc. Embedded inline in clause 40.2.1.1; not numbered as a 'Table N' in IS 456.",
+    "headers": [
+      "Overall depth of slab (mm)",
+      "k"
+    ],
+    "rows": [
+      [
+        "300 or more",
         "1.00"
       ],
       [
-        "Rectangle",
-        "1 + 0.2*B/L",
-        "1 + 0.2*B/L",
-        "1 - 0.4*B/L"
+        "275",
+        "1.05"
       ],
       [
-        "Square",
-        "1.3",
-        "1.2",
-        "0.8"
+        "250",
+        "1.10"
       ],
       [
-        "Circle",
-        "1.3",
-        "1.2",
-        "0.6"
+        "225",
+        "1.15"
+      ],
+      [
+        "200",
+        "1.20"
+      ],
+      [
+        "175",
+        "1.25"
+      ],
+      [
+        "150 or less",
+        "1.30"
       ]
     ],
-    "note": "For circular footings, use B as the diameter in the bearing capacity formula.",
-    "nl_summary": "Shape factors per IS 6403 Table 2. Strip footing has all factors 1.0. Rectangular footings use B/L (width/length) ratio: sc and sq grow with B/L, s_gamma shrinks. Square gives sc=1.3, sq=1.2, s_gamma=0.8. Circle gives sc=1.3, sq=1.2, s_gamma=0.6."
+    "note": "k is a multiplier applied to the τc value read from Table 19 to obtain the design shear strength of a solid slab without shear reinforcement: τc' = k·τc. Thinner slabs receive a stronger relative shear strength (k > 1) because shallow members behave better in shear per unit depth than thicker beams. The depth steps in the table are at 25 mm intervals between 150 mm and 300 mm; values for intermediate depths are obtained by linear interpolation in standard practice. Provision excludes flat slabs (which use 31.6 punching-shear rules instead).",
+    "nl_summary": "Solid-slab depth factor k for the τc' = k·τc enhancement: 1.00 at depth ≥ 300 mm, scaling up by 0.05 per 25 mm reduction in depth to 1.30 at depth ≤ 150 mm. Multiplies the Table 19 τc to give the design shear strength of slabs. Flat slabs excluded.",
+    "tags": [
+      "shear",
+      "shear-strength",
+      "slab",
+      "table"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_2_1_design_shear_strength_concrete",
+      "table_19_design_shear_strength_concrete"
+    ]
   },
   {
-    "id": "table_3_relative_density",
+    "id": "cl_40_2_2_axial_compression_factor",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.2.2",
+    "page": 72,
+    "title": "Shear strength of members under axial compression — δ enhancement",
+    "text": "For compression members subjected to axial compressive force Pu in addition to shear, the design shear strength of concrete from Table 19 is multiplied by the enhancement factor δ before comparing with the nominal shear stress. The factor is δ = 1 + 3·Pu/(Ag·fck), capped at 1.5. Here Pu is the axial compressive force in Newtons (with the appropriate load factor applied), Ag is the gross cross-sectional area of the concrete in mm², and fck is the characteristic compressive strength of the concrete in N/mm². The factor reflects the experimental observation that columns under high axial compression carry more shear than equivalent flexural members without compression, because the axial-compressive stress closes incipient diagonal-tension cracks before they propagate into a critical shear plane. The cap of 1.5 prevents over-reliance on this enhancement at very high axial loads, where buckling and confinement effects dominate. The enhanced concrete shear strength δ·τc replaces τc in the comparisons of 40.3 (minimum reinforcement when τv < δ·τc) and 40.4 (designed reinforcement when τv > δ·τc).",
+    "formula_nl_summary": "Axial-compression enhancement factor for concrete shear strength: δ = 1 + 3·Pu/(Ag·fck), capped at 1.5. Multiply τc from Table 19 by δ before the τv comparison. Reflects diagonal-crack closure under axial compression; cap at 1.5 prevents over-credit at high axial loads.",
+    "formula_latex": "\\delta = 1 + \\frac{3\\,P_u}{A_g\\,f_{ck}} \\leq 1.5",
+    "tags": [
+      "shear",
+      "shear-strength",
+      "axial-compression",
+      "column",
+      "concrete-grade"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "table_19_design_shear_strength_concrete",
+      "cl_40_2_1_design_shear_strength_concrete",
+      "cl_40_3_minimum_shear_reinforcement",
+      "cl_40_4_design_shear_reinforcement"
+    ]
+  },
+  {
+    "id": "cl_40_2_3_max_shear_stress",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.2.3",
+    "page": 72,
+    "title": "Maximum shear stress with reinforcement — τc,max cap from Table 20",
+    "text": "Even when shear reinforcement is provided, the nominal shear stress τv in beams must not exceed the maximum value τc,max given in Table 20. This is an absolute upper bound: a beam whose τv exceeds τc,max cannot be made safe by adding more stirrups; the section must be enlarged or the concrete grade increased instead. The cap reflects the limit beyond which crushing of the diagonal compression strut in the truss model becomes the governing failure mode, and shear reinforcement cannot relieve it.\n\nFor solid slabs (40.2.3.1), the corresponding cap is half the value of τc,max from Table 20. The factor of one-half reflects the absence of shear reinforcement in slabs and provides a more conservative bound consistent with the slab design philosophy of avoiding stirrups altogether. Flat slabs are subject to the punching-shear provisions of 31.6 in lieu of this cap.",
+    "formula_nl_summary": "Absolute cap on nominal shear stress, from Table 20: τv ≤ τc,max for beams (even with shear reinforcement); τv ≤ ½·τc,max for solid slabs (per 40.2.3.1). Exceeding τc,max means the section must be redesigned — concrete crushing in the diagonal compression strut cannot be relieved by more stirrups.",
+    "formula_latex": "\\tau_v \\leq \\tau_{c,\\max} \\quad (\\text{beams}); \\qquad \\tau_v \\leq \\tfrac{1}{2}\\,\\tau_{c,\\max} \\quad (\\text{solid slabs})",
+    "tags": [
+      "shear",
+      "nominal-shear-stress",
+      "shear-strength",
+      "beam",
+      "slab"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "table_20_max_shear_stress",
+      "cl_40_1_nominal_shear_stress",
+      "cl_40_2_1_design_shear_strength_concrete",
+      "cl_40_4_design_shear_reinforcement"
+    ]
+  },
+  {
+    "id": "table_20_max_shear_stress",
     "content_type": "table",
-    "code": "IS 6403:1981",
-    "clause": "5.2.1.1",
-    "page": 9,
-    "table_number": "3",
-    "caption": "Method of analysis (general/local shear) based on relative density of cohesionless soil.",
+    "code": "IS 456:2000",
+    "clause": "40.2.3",
+    "page": 73,
+    "table_number": "20",
+    "caption": "Maximum shear stress τc,max (N/mm²) by concrete grade — the absolute upper bound on nominal shear stress in beams, even when shear reinforcement is provided. Cross-referenced from clauses 40.2.3, 40.2.3.1, 40.5.1, and 41.3.1.",
     "headers": [
-      "Relative density",
-      "Void ratio",
-      "Condition",
-      "Method of analysis"
+      "Quantity",
+      "M15",
+      "M20",
+      "M25",
+      "M30",
+      "M35",
+      "M40 and above"
     ],
     "rows": [
       [
-        "> 70%",
-        "< 0.55",
-        "Dense",
-        "General shear"
-      ],
-      [
-        "< 20%",
-        "> 0.75",
-        "Loose",
-        "Local shear (or punching)"
-      ],
-      [
-        "20% to 70%",
-        "0.55\u20130.75",
-        "Medium",
-        "Interpolate between general and local shear"
-      ]
-    ],
-    "nl_summary": "Choosing general vs local shear failure analysis for cohesionless soils based on relative density: dense (>70%) uses general shear, loose (<20%) uses local shear / punching, medium soils interpolate."
-  },
-  {
-    "id": "table_4_desiccated",
-    "content_type": "table",
-    "code": "IS 6403:1981",
-    "clause": "5.3.3",
-    "page": 14,
-    "table_number": "4",
-    "caption": "Data for ultimate net bearing capacity of desiccated cohesive soil. Use 4*lambda*B/q_d (per Amendment 1; the original printing showed 8*lambda*B/q_d) matched against q_d/c1 by trial and error.",
-    "headers": [
-      "4*lambda*B / q_d",
-      "q_d / c1"
-    ],
-    "rows": [
-      [
-        "0.0",
-        "5.7"
-      ],
-      [
-        "0.2",
-        "5.0"
-      ],
-      [
-        "0.4",
-        "4.5"
-      ],
-      [
-        "0.6",
+        "τc,max (N/mm²)",
+        "2.5",
+        "2.8",
+        "3.1",
+        "3.5",
+        "3.7",
         "4.0"
-      ],
-      [
-        "0.8",
-        "3.6"
-      ],
-      [
-        "1.0",
-        "3.2"
       ]
     ],
-    "nl_summary": "Desiccated cohesive soil bearing capacity table. As lambda*B/q_d increases (more cohesion-decrease relative to capacity), the q_d/c1 ratio drops from 5.7 (no decrease) to 3.2 (strong decrease). Used in trial-and-error solution of desiccated soil capacity."
-  },
-  {
-    "id": "fig_1_phi_vs_N",
-    "content_type": "graph",
-    "code": "IS 6403:1981",
-    "clause": "5.2.2",
-    "page": 11,
-    "figure_number": "1",
-    "figure_subtype": "phi_vs_spt",
-    "image_path": "/home/claude/is6403_rag/data/fig1_phi_vs_N.png",
-    "axes": {
-      "x": "phi (degrees)",
-      "y": "N (blows / 30 cm)"
-    },
-    "curves": [
-      {
-        "label": "phi vs N",
-        "points": [
-          {
-            "x": 28.5,
-            "y": 2
-          },
-          {
-            "x": 30,
-            "y": 4
-          },
-          {
-            "x": 32,
-            "y": 8
-          },
-          {
-            "x": 34,
-            "y": 14
-          },
-          {
-            "x": 36,
-            "y": 22
-          },
-          {
-            "x": 38,
-            "y": 32
-          },
-          {
-            "x": 40,
-            "y": 45
-          },
-          {
-            "x": 42,
-            "y": 58
-          },
-          {
-            "x": 44,
-            "y": 75
-          }
-        ]
-      }
+    "note": "Exceeding τc,max is a hard limit: no quantity of shear reinforcement can resolve a section whose nominal shear stress exceeds τc,max. The cap reflects the limit beyond which crushing of the diagonal compression strut in the truss model becomes the governing failure mode. For solid slabs (40.2.3.1), the effective cap is half of τc,max. For sections also subjected to torsion (41.3.1), the equivalent nominal shear stress τve must not exceed τc,max either.",
+    "nl_summary": "Maximum shear stress τc,max in N/mm² by concrete grade: 2.5 (M15), 2.8 (M20), 3.1 (M25), 3.5 (M30), 3.7 (M35), 4.0 (M40 and above). Hard cap on nominal shear stress in beams (even with stirrups). Half-value cap for solid slabs (40.2.3.1). Also caps the equivalent shear stress under combined shear and torsion (41.3.1).",
+    "tags": [
+      "shear",
+      "shear-strength",
+      "concrete-grade",
+      "table"
     ],
-    "density_categories": [
-      {
-        "label": "Very loose",
-        "phi_range": [
-          0,
-          30
-        ],
-        "N_range": [
-          0,
-          4
-        ]
-      },
-      {
-        "label": "Loose",
-        "phi_range": [
-          30,
-          32
-        ],
-        "N_range": [
-          4,
-          10
-        ]
-      },
-      {
-        "label": "Medium",
-        "phi_range": [
-          32,
-          36
-        ],
-        "N_range": [
-          10,
-          30
-        ]
-      },
-      {
-        "label": "Dense",
-        "phi_range": [
-          36,
-          41
-        ],
-        "N_range": [
-          30,
-          50
-        ]
-      },
-      {
-        "label": "Very dense",
-        "phi_range": [
-          41,
-          50
-        ],
-        "N_range": [
-          50,
-          100
-        ]
-      }
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_2_3_max_shear_stress",
+      "cl_40_5_1_general_enhanced_shear",
+      "cl_41_3_1_equivalent_shear",
+      "cl_41_4_3_torsion_transverse_reinforcement"
+    ]
+  },
+  {
+    "id": "cl_40_3_minimum_shear_reinforcement",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.3",
+    "page": 72,
+    "title": "Minimum shear reinforcement when τv < τc",
+    "text": "When the nominal shear stress τv (computed from 40.1) is less than the design shear strength of concrete τc (from Table 19, possibly modified by the slab depth factor k of 40.2.1.1 or the axial-compression enhancement δ of 40.2.2), the section nominally needs no shear reinforcement to carry the applied shear by truss action. However, the code still requires a minimum quantity of shear reinforcement in beams to provide ductility, control diagonal-crack widths, and safeguard against sudden brittle failure if the actual shear demand exceeds the predicted concrete capacity. The required minimum is specified in clause 26.5.1.6 of the detailing rules — that clause supplies the minimum stirrup area, maximum spacing, and other geometric requirements. The minimum-reinforcement provision applies to beams; solid slabs are exempt from it (consistent with the slab design philosophy of 40.2.1.1 of avoiding stirrups altogether).",
+    "formula_nl_summary": "When τv < τc (with any applicable enhancement), beams still require minimum shear reinforcement per 26.5.1.6 — provided for ductility and diagonal-crack control, not for shear resistance per se. Solid slabs are exempt.",
+    "tags": [
+      "shear",
+      "shear-reinforcement",
+      "beam",
+      "stirrup"
     ],
-    "nl_caption": "Figure 1 of IS 6403 \u2014 relationship between angle of internal friction phi (degrees) and corrected SPT N value (blows per 30 cm) for cohesionless soils. Used to derive phi from SPT data for use in the bearing capacity formulae. Categories shown: very loose, loose, medium, dense, very dense. Curve shows N rising rapidly with phi: N = 4 at phi = 30 degrees, N = 22 at phi = 36, N = 45 at phi = 40, N = 75 at phi = 44."
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_26_5_1_6_min_shear",
+      "cl_40_1_nominal_shear_stress",
+      "cl_40_2_1_design_shear_strength_concrete",
+      "cl_40_2_2_axial_compression_factor",
+      "cl_40_4_design_shear_reinforcement",
+      "table_19_design_shear_strength_concrete",
+      "cl_41_3_2_min_shear_for_torsion"
+    ]
   },
   {
-    "id": "fig_2_cone_chart",
-    "content_type": "graph",
-    "code": "IS 6403:1981",
-    "clause": "5.2.3",
-    "page": 12,
-    "figure_number": "2",
-    "figure_subtype": "cone_test_chart",
-    "image_path": "/home/claude/is6403_rag/data/fig2_cone_test_chart.png",
-    "axes": {
-      "x": "B (cm)",
-      "y": "qd / qc"
-    },
-    "nl_caption": "Figure 2 of IS 6403 \u2014 chart for static cone test. Plots dimensionless ratio qd/qc (ultimate bearing capacity to cone resistance) against footing width B in cm, for three values of embedment ratio Df/B = 0, 0.5, and 1.0. Used to determine bearing capacity of shallow strip footings on cohesionless soil from cone penetration test data. qd/qc decreases as B increases; ranges roughly from 0.0625 to 0.25 across the chart."
-  },
-  {
-    "id": "fig_3_layered_Nc",
-    "content_type": "graph",
-    "code": "IS 6403:1981",
-    "clause": "5.3.2",
-    "page": 13,
-    "figure_number": "3",
-    "figure_subtype": "layered_cohesive_Nc",
-    "image_path": "/home/claude/is6403_rag/data/fig3_layered_cohesive.png",
-    "axes": {
-      "x": "c1/c2",
-      "y": "Nc"
-    },
-    "curves": [
-      {
-        "label": "d/b = 0",
-        "points": [
-          {
-            "x": 0,
-            "y": 0
-          },
-          {
-            "x": 0.4,
-            "y": 2.2
-          },
-          {
-            "x": 0.8,
-            "y": 4.4
-          },
-          {
-            "x": 1.0,
-            "y": 5.5
-          },
-          {
-            "x": 1.2,
-            "y": 6.6
-          },
-          {
-            "x": 1.5,
-            "y": 8.25
-          },
-          {
-            "x": 2.0,
-            "y": 11.0
-          }
-        ]
-      },
-      {
-        "label": "d/b = 0.5 (lower)",
-        "points": [
-          {
-            "x": 0,
-            "y": 3.0
-          },
-          {
-            "x": 0.4,
-            "y": 3.9
-          },
-          {
-            "x": 0.8,
-            "y": 4.9
-          },
-          {
-            "x": 1.0,
-            "y": 5.5
-          }
-        ]
-      },
-      {
-        "label": "d/b = 1.0 (lower)",
-        "points": [
-          {
-            "x": 0,
-            "y": 4.0
-          },
-          {
-            "x": 0.4,
-            "y": 4.6
-          },
-          {
-            "x": 0.8,
-            "y": 5.2
-          },
-          {
-            "x": 1.0,
-            "y": 5.5
-          }
-        ]
-      },
-      {
-        "label": "d/b = 1.5 (lower)",
-        "points": [
-          {
-            "x": 0,
-            "y": 4.5
-          },
-          {
-            "x": 0.4,
-            "y": 4.9
-          },
-          {
-            "x": 0.8,
-            "y": 5.3
-          },
-          {
-            "x": 1.0,
-            "y": 5.5
-          }
-        ]
-      },
-      {
-        "label": "d/b = 2.0 (lower)",
-        "points": [
-          {
-            "x": 0,
-            "y": 5.0
-          },
-          {
-            "x": 0.4,
-            "y": 5.2
-          },
-          {
-            "x": 0.8,
-            "y": 5.4
-          },
-          {
-            "x": 1.0,
-            "y": 5.5
-          }
-        ]
-      },
-      {
-        "label": "d/b = 0.2 (upper)",
-        "points": [
-          {
-            "x": 1.0,
-            "y": 5.5
-          },
-          {
-            "x": 1.2,
-            "y": 6.5
-          },
-          {
-            "x": 1.5,
-            "y": 8.1
-          },
-          {
-            "x": 2.0,
-            "y": 10.2
-          }
-        ]
-      },
-      {
-        "label": "d/b = 0.4 (upper)",
-        "points": [
-          {
-            "x": 1.0,
-            "y": 5.5
-          },
-          {
-            "x": 1.2,
-            "y": 6.3
-          },
-          {
-            "x": 1.5,
-            "y": 7.7
-          },
-          {
-            "x": 2.0,
-            "y": 9.5
-          }
-        ]
-      },
-      {
-        "label": "d/b = 0.6 (upper)",
-        "points": [
-          {
-            "x": 1.0,
-            "y": 5.5
-          },
-          {
-            "x": 1.2,
-            "y": 6.0
-          },
-          {
-            "x": 1.5,
-            "y": 6.7
-          },
-          {
-            "x": 2.0,
-            "y": 7.0
-          }
-        ]
-      },
-      {
-        "label": "d/b = 0.8 (upper)",
-        "points": [
-          {
-            "x": 1.0,
-            "y": 5.5
-          },
-          {
-            "x": 1.2,
-            "y": 5.8
-          },
-          {
-            "x": 1.5,
-            "y": 6.1
-          },
-          {
-            "x": 2.0,
-            "y": 6.3
-          }
-        ]
-      },
-      {
-        "label": "d/b = 1.0 (upper)",
-        "points": [
-          {
-            "x": 1.0,
-            "y": 5.5
-          },
-          {
-            "x": 1.2,
-            "y": 5.6
-          },
-          {
-            "x": 1.5,
-            "y": 5.7
-          },
-          {
-            "x": 2.0,
-            "y": 5.7
-          }
-        ]
-      }
+    "id": "cl_40_4_design_shear_reinforcement",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.4",
+    "page": 72,
+    "title": "Design of shear reinforcement when τv > τc",
+    "text": "When the nominal shear stress τv exceeds the design shear strength of concrete τc (from Table 19, with any applicable enhancement factor), shear reinforcement is required to carry the surplus. Three forms are permitted: vertical stirrups; bent-up bars used together with stirrups; or inclined stirrups. Where bent-up bars are provided, their contribution to the total shear resistance must not exceed half the total — the rest must come from stirrups. The shear that the reinforcement must carry is Vus = Vu − τc·b·d, where Vu is the design shear and τc·b·d is the contribution of the concrete (using b = bw for flanged sections). The strength contributed by the shear reinforcement Vus is calculated by one of three formulae depending on the configuration:\n(a) For vertical stirrups: Vus = 0.87·fy·Asv·d / sv.\n(b) For inclined stirrups, or for a series of bars bent-up at different cross-sections: Vus = (0.87·fy·Asv·d / sv) × (sin α + cos α).\n(c) For a single bar or a single group of parallel bars all bent-up at the same cross-section: Vus = 0.87·fy·Asv·sin α.\n\nIn all three formulae: Asv is the total cross-sectional area of stirrup legs (or bent-up bars) within a length sv along the member; sv is the spacing of the stirrups (or bent-up bars) along the member length; fy is the characteristic strength of the stirrup or bent-up reinforcement, capped at 415 N/mm² regardless of the actual grade specified; b is the breadth (bw for flanged sections); d is the effective depth; and α is the angle between the inclined stirrup or bent-up bar and the axis of the member, which must not be less than 45 degrees. The recurring 0.87·fy multiplier is the design steel stress fy/γm with γm = 1.15.\n\nNOTE 1: where more than one type of shear reinforcement is used in the same portion of a beam, the total shear resistance is computed as the sum of the resistances for the various types calculated separately. NOTE 2: independent of the design Vus, the stirrup area must not be less than the minimum prescribed in 26.5.1.6.",
+    "formula_nl_summary": "When τv > τc, design shear reinforcement to carry Vus = Vu − τc·b·d. Three configurations: vertical stirrups Vus = 0.87·fy·Asv·d/sv; inclined stirrups or series of bent-up bars at different sections Vus = 0.87·fy·Asv·d·(sin α + cos α)/sv; single group of bent-up bars at one section Vus = 0.87·fy·Asv·sin α. Constraints: bent-up bars contribute at most 50% of total Vus, fy ≤ 415 N/mm², α ≥ 45°, total stirrups ≥ 26.5.1.6 minimum, multiple types sum independently.",
+    "formula_latex": "V_{us} = \\frac{0.87\\,f_y\\,A_{sv}\\,d}{s_v}",
+    "tags": [
+      "shear",
+      "shear-reinforcement",
+      "stirrup",
+      "beam",
+      "bent-up-bar",
+      "inclined-bar"
     ],
-    "amendment_note": "Per Amendment 1 (May 1984), the original Fig 3 x-axis label 'c1/c2' was directed to be substituted with 'c2/c1'. The figure as printed in the standard shows c1/c2.",
-    "nl_caption": "Figure 3 of IS 6403 \u2014 bearing capacity factor Nc for layered cohesive soil deposits, plotted against ratio c1/c2 (top to bottom layer undrained cohesion) for various d/b ratios, where d is top layer thickness below footing and b is half the footing width. Two families of curves: lower-side curves (c1/c2 < 1, top layer weaker) labeled d/b = 0, 0.5, 1.0, 1.5, 2.0; upper-side curves (c1/c2 > 1, top stronger) labeled d/b = 0, 0.2, 0.4, 0.6, 0.8, 1.0. All curves converge at (c1/c2 = 1, Nc ~ 5.5). Used together with q_d = c1 * Nc for two-layered cohesive systems."
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_1_nominal_shear_stress",
+      "cl_40_2_1_design_shear_strength_concrete",
+      "cl_40_2_2_axial_compression_factor",
+      "cl_40_2_3_max_shear_stress",
+      "cl_40_3_minimum_shear_reinforcement",
+      "table_19_design_shear_strength_concrete",
+      "cl_26_5_1_6_min_shear",
+      "cl_40_5_2_shear_reinforcement_close_to_supports",
+      "cl_40_5_3_simplified_enhanced_shear",
+      "cl_41_1_torsion_general"
+    ]
   },
   {
-    "id": "fig_4_desiccated",
+    "id": "cl_40_5_1_general_enhanced_shear",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.5.1",
+    "page": 74,
+    "title": "Enhanced shear strength near supports — general principle",
+    "text": "Shear failure in beams and cantilevers without shear reinforcement normally occurs along a plane inclined at about 30 degrees to the horizontal. When the section under consideration is closer to a support or concentrated load than twice the effective depth, the failure plane is geometrically constrained to be more steeply inclined than this 30-degree default, and the shear force required to produce failure is correspondingly increased. The code allows this enhancement to be taken into account by raising the design shear strength of concrete from the Table 19 value τc up to 2d·τc/av, where av is the horizontal distance from the face of the support to the section being considered (or to the concentrated load), provided av ≤ 2d. Beyond a distance of 2d from the support, the conventional Table 19 value applies unchanged.\n\nTwo provisos guard the enhancement. First, the design shear stress at the face of the support itself must remain less than τc,max from Table 20 — the cap on diagonal-strut crushing applies regardless of how close the section is to the support, since steel reinforcement cannot relieve concrete crushing. Second, for the enhancement to develop physically, the tension reinforcement at the section must extend on each side of the point where the possible failure plane intersects it for a distance at least equal to the effective depth d, or be provided with an equivalent anchorage device. Without this anchorage continuity, the tension chord of the truss model is not present to balance the steeper compression strut, and the enhanced shear capacity cannot be mobilised. Fig 24 in the code illustrates the geometry — failure plane (X − X) inclined at angle θ from a support face, with av measured from the face to the section.",
+    "formula_nl_summary": "Within 2d of a support face, the design shear strength of concrete may be enhanced from τc (Table 19) to 2d·τc/av, where av is the horizontal distance from the support face to the section. The enhancement is capped by τc,max (Table 20) at the support face. Tension reinforcement must extend at least d on each side of the failure-plane intersection (or have equivalent anchorage) for the enhancement to be effective.",
+    "formula_latex": "\\tau_{c,\\text{enh}} = \\frac{2\\,d\\,\\tau_c}{a_v} \\quad (a_v \\leq 2d), \\qquad \\tau_v\\big|_{\\text{face}} \\leq \\tau_{c,\\max}",
+    "tags": [
+      "shear",
+      "shear-strength",
+      "support",
+      "anchorage",
+      "beam"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "fig_24_shear_failure_near_supports",
+      "table_19_design_shear_strength_concrete",
+      "table_20_max_shear_stress",
+      "cl_40_5_2_shear_reinforcement_close_to_supports",
+      "cl_40_5_3_simplified_enhanced_shear"
+    ]
+  },
+  {
+    "id": "fig_24_shear_failure_near_supports",
     "content_type": "figure",
-    "code": "IS 6403:1981",
-    "clause": "5.3.3",
-    "page": 14,
-    "figure_number": "4",
-    "figure_subtype": "desiccated_schematic",
-    "image_path": "/home/claude/is6403_rag/data/fig4_desiccated.png",
-    "nl_caption": "Figure 4 of IS 6403 \u2014 schematic showing the geometry of bearing capacity in desiccated cohesive soil. Left subfigure shows the footing width B, applied pressure q_d, and the assumed cylindrical failure surface extending below. Right subfigure shows undrained cohesion c (kgf/cm^2) decreasing linearly with depth at rate lambda (per cm), starting from value c1 at the surface. lambda is the slope of the c-vs-depth profile and is determined from borehole data."
+    "code": "IS 456:2000",
+    "clause": "40.5.1",
+    "page": 74,
+    "figure_number": "24",
+    "figure_subtype": "shear_failure_geometry",
+    "title": "Shear failure near supports",
+    "nl_caption": "Geometry diagram for the enhanced-shear-strength provision of clause 40.5.1. The figure shows the end region of a beam: a hatched support at the bottom-left; uniformly distributed downward load arrows along the top fibre; a failure plane drawn as a solid inclined line rising from the inner face of the support up to a point on the top fibre, inclined at an angle θ from the horizontal; and the horizontal distance av measured along the beam axis from the face of the support to the cross-section X − X where the failure plane meets the top fibre. The accompanying NOTE clarifies that the shear causing failure is the shear acting on the X − X cross-section. The diagram visualises why the failure plane being forced steeper (smaller av, larger θ) increases the apparent concrete shear capacity — the corresponding 2d·τc/av enhancement formula in 40.5.1 is the algebraic statement of this geometric effect.",
+    "image_url": null,
+    "tags": [
+      "shear",
+      "support",
+      "beam",
+      "figure"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_5_1_general_enhanced_shear"
+    ]
+  },
+  {
+    "id": "cl_40_5_2_shear_reinforcement_close_to_supports",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.5.2",
+    "page": 74,
+    "title": "Shear reinforcement for sections close to supports",
+    "text": "Where shear reinforcement is required at a section closer than 2d to a support face, its total cross-sectional area As (note: this is the total area placed near the support, not the per-spacing stirrup area Asv used in 40.4) is given by As = av·b·(τv − 2d·τc/av) / (0.87·fy), with the floor As ≥ 0.4·av·b / (0.87·fy). Here av is the horizontal distance from the support face to the section, b is the breadth of the member (use bw for flanged sections per 40.1), τv is the nominal shear stress at the section computed per 40.1, τc is the un-enhanced Table 19 value (the formula already encodes the 2d/av enhancement via the τv − 2d·τc/av term), and fy is the steel strength capped at 415 N/mm². The 0.87·fy denominator is the design yield stress fy/γm with γm = 1.15. Note carefully the As / Asv notation collision with 40.4 — the rules layer should keep these as distinct quantities: As here is a one-shot total over a region near the support; Asv in 40.4 is the per-spacing leg area along the member.\n\nThe reinforcement should be distributed within the middle three-quarters of av (i.e., centred on the failure plane intersection, leaving the outer eighth at each end bare). Where av is less than the effective depth d (very-short shear span), horizontal shear reinforcement is more effective than vertical — this reflects the physical geometry: with av < d, the failure plane is steeper than 45 degrees, so reinforcement aligned closer to the horizontal crosses it at a more favourable angle and resists the diagonal tension more directly.",
+    "formula_nl_summary": "When av < 2d and shear reinforcement is needed: total area As = av·b·(τv − 2d·τc/av)/(0.87·fy), with floor As ≥ 0.4·av·b/(0.87·fy). As here is the total area placed near the support — distinct from the per-spacing Asv of 40.4. Distribute within the middle 3/4 of av. For av < d, horizontal shear reinforcement outperforms vertical because the steeper failure plane geometry favours horizontal-aligned steel.",
+    "formula_latex": "A_s = \\frac{a_v\\,b\\,(\\tau_v - 2d\\,\\tau_c/a_v)}{0.87\\,f_y} \\;\\geq\\; \\frac{0.4\\,a_v\\,b}{0.87\\,f_y}",
+    "tags": [
+      "shear",
+      "shear-reinforcement",
+      "support",
+      "beam",
+      "stirrup"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_5_1_general_enhanced_shear",
+      "cl_40_5_3_simplified_enhanced_shear",
+      "cl_40_4_design_shear_reinforcement",
+      "table_19_design_shear_strength_concrete"
+    ]
+  },
+  {
+    "id": "cl_40_5_3_simplified_enhanced_shear",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "40.5.3",
+    "page": 74,
+    "title": "Enhanced shear strength near supports — simplified approach",
+    "text": "While the rigorous procedure of 40.5.1 and 40.5.2 may be applied to any beam, IS 456 permits a simplified approach for two common cases: beams carrying generally uniform load (e.g. self-weight, slab loads transferred as line load), and beams where the principal concentrated load is located farther than 2d from the face of the support. In these cases, the shear stress need only be calculated at a single section located a distance d from the face of the support, rather than at the support face or at multiple sections within 2d. The design shear strength τc is read from Table 19 in the conventional way — there is no 2d·τc/av enhancement in this simplified approach, because the d-distance critical section already accounts implicitly for the nearby-support effect. Appropriate shear reinforcement is then designed at this critical section per 40.4 (or minimum reinforcement per 40.3 if τv ≤ τc), and the same arrangement is provided at all sections closer to the support — no further shear check is required at sections between the support face and the d-distance section.\n\nThis simplified approach is the one most commonly used in design practice for simply-supported beams under distributed load, and is conventionally called 'critical section at d'. It is conservative compared to the full 2d·τc/av enhancement of 40.5.1 (which would permit a smaller stirrup quantity by raising τc), and trades some economy for procedural simplicity. It mirrors 41.2's simplified rule for the critical section under torsion.",
+    "formula_nl_summary": "Simplified rule for enhanced shear strength near supports: applicable to beams under uniform load, or with the principal point load located farther than 2d from the support. Take the critical section at a distance d from the support face. Compute τv there, look up τc from Table 19 with no 2d/av enhancement, design shear reinforcement at that section per 40.4, and extend the same arrangement to the support face with no further shear check inside d.",
+    "tags": [
+      "shear",
+      "support",
+      "beam",
+      "shear-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_40_5_1_general_enhanced_shear",
+      "cl_40_5_2_shear_reinforcement_close_to_supports",
+      "cl_40_4_design_shear_reinforcement",
+      "table_19_design_shear_strength_concrete",
+      "cl_41_2_torsion_critical_section"
+    ]
+  },
+  {
+    "id": "cl_41_1_torsion_general",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.1",
+    "page": 74,
+    "title": "Torsion — general scope and design philosophy",
+    "text": "Section 41 distinguishes two types of torsion in indeterminate structures. The first is **equilibrium torsion**, where the torsional moment is required to maintain global equilibrium of the structure (e.g. a beam supporting an eccentric balcony cantilever; a spandrel beam with edge slabs framing into one side only; a curved beam in plan). For equilibrium torsion, members must be designed for the torsional moment in accordance with 41.2 (critical section), 41.3 (combined shear and torsion via equivalent shear), and 41.4 (longitudinal and transverse reinforcement). The second type is **compatibility torsion**, where torsion arises only from rotational restraint between members at a joint and can be released without compromising equilibrium (e.g. a secondary beam framing into the side of a primary beam — if the primary beam is allowed to twist, the secondary beam's end fixity moment vanishes). For compatibility torsion, no specific torsional design is required, provided torsional stiffness is set to zero in the structural analysis (releasing the restraint). Adequate control of any incidental torsional cracking is then assumed to be provided by the shear reinforcement designed under Section 40.\n\nThe design philosophy adopted in 41.3 and 41.4 (and clarified in the NOTE under 41.1) is the **fictitious-action approach**: rather than designing torsion reinforcement separately from bending and shear reinforcement, the actual bending moment is replaced by a larger fictitious bending moment that accounts for torsion (Me1, defined in 41.4.2), and the actual shear is replaced by a larger fictitious equivalent shear that accounts for torsion (Ve, defined in 41.3.1). Conventional flexure and shear design then proceeds with these augmented actions; no separate torsion check appears as an independent step.\n\nPer 41.1.1, the design rules of 41.3 and 41.4 are written for solid rectangular cross-sections, but may be applied to flanged beams (T-sections, L-sections, etc.) by substituting bw, the breadth of the web, in place of b. This substitution is generally conservative — it ignores any contribution of the flanges to torsional stiffness and resistance — and specialist literature should be consulted where greater accuracy is needed.",
+    "formula_nl_summary": "Section 41 covers torsion design. Equilibrium torsion (required for global equilibrium) → design per 41.2/41.3/41.4. Compatibility torsion (joint-restraint only) → may be released by zeroing torsional stiffness in analysis; controlled by Section 40 shear reinforcement. Design philosophy is the fictitious-action approach: torsion is folded into augmented bending moment Me1 (41.4.2) and augmented equivalent shear Ve (41.3.1). 41.1.1: rules apply to solid rectangular sections; flanged beams use bw conservatively.",
+    "tags": [
+      "torsion",
+      "equilibrium-torsion",
+      "beam",
+      "flanged-section",
+      "limit-state"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_2_torsion_critical_section",
+      "cl_41_3_1_equivalent_shear",
+      "cl_41_4_1_torsion_reinforcement_general",
+      "cl_41_4_2_torsion_longitudinal_reinforcement",
+      "cl_41_4_3_torsion_transverse_reinforcement",
+      "cl_40_4_design_shear_reinforcement"
+    ]
+  },
+  {
+    "id": "cl_41_2_torsion_critical_section",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.2",
+    "page": 74,
+    "title": "Critical section for torsion design",
+    "text": "The critical section for torsion design is taken at a distance d (the effective depth) from the face of the support. Sections closer to the support than d need not be designed for the higher torsion that the analysis produces in that interval; instead, they may be designed for the same torsional moment Tu as the critical section located at d. This rule mirrors the analogous simplified shear rule of 40.5.3 (critical section at d for shear under uniform load) and reflects the physical fact that the support reaction itself does not generate torsion at the section being checked, so the torsional demand peaks just outside the support reaction zone, not at the face. The d-distance critical section is therefore the relevant location at which to evaluate both Tu and Vu for the equivalent-shear formula of 41.3.1 and the equivalent-moment formula of 41.4.2.",
+    "formula_nl_summary": "Critical section for torsion design: take Tu as computed at a distance d from the support face. Sections within d of the support are designed for the same torsion as the critical section. Mirrors the simplified shear rule of 40.5.3.",
+    "tags": [
+      "torsion",
+      "beam",
+      "support",
+      "critical-section"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_1_torsion_general",
+      "cl_41_3_1_equivalent_shear",
+      "cl_40_5_3_simplified_enhanced_shear"
+    ]
+  },
+  {
+    "id": "cl_41_3_1_equivalent_shear",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.3.1",
+    "page": 75,
+    "title": "Equivalent shear for combined shear and torsion",
+    "text": "For sections subjected to combined shear and torsion, an **equivalent shear** Ve is computed that bundles the actual shear Vu with a torsion-derived contribution: Ve = Vu + 1.6·Tu/b, where Tu is the design torsional moment, Vu is the design shear from analysis, and b is the breadth of the beam (use bw for flanged sections per 41.1.1). The factor 1.6/b converts the torsional moment into an equivalent shear force per the IS 456 fictitious-action philosophy of 41.1 — the torsional shear flow circulating around the section is approximated as a uniform shear of magnitude 1.6·Tu/b acting alongside the actual transverse shear.\n\nThe **equivalent nominal shear stress** τve is then computed using the formula of 40.1 with Vu replaced by Ve: τve = Ve / (b·d) for uniform-depth beams, or the varying-depth analogue with Ve substituted for Vu. This τve is the quantity then compared against τc (Table 19) and τc,max (Table 20) in 41.3.2 and 41.3.3 to decide on minimum or designed reinforcement.\n\nThe cap is hard: τve must not exceed τc,max from Table 20. Exceeding it means the section has insufficient capacity in combined shear-and-torsion regardless of how much transverse reinforcement is added, and must be redesigned (larger section or higher concrete grade). This parallels the τv ≤ τc,max cap for pure shear (40.2.3) and reflects the same physical limit — crushing of the diagonal compression strut in the truss model.",
+    "formula_nl_summary": "For combined shear and torsion: equivalent shear Ve = Vu + 1.6·Tu/b. Equivalent nominal shear stress τve is computed as in 40.1 with Vu replaced by Ve. τve must not exceed τc,max from Table 20 — same hard cap as for pure shear, exceeding it requires redesign. Use bw for flanged sections.",
+    "formula_latex": "V_e = V_u + 1.6\\,\\frac{T_u}{b}",
+    "tags": [
+      "shear",
+      "torsion",
+      "equivalent-shear",
+      "torsional-moment",
+      "beam"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_3_2_min_shear_for_torsion",
+      "cl_41_3_3_design_shear_for_torsion",
+      "cl_41_4_3_torsion_transverse_reinforcement",
+      "cl_40_1_nominal_shear_stress",
+      "table_20_max_shear_stress",
+      "cl_41_1_torsion_general",
+      "cl_41_2_torsion_critical_section"
+    ]
+  },
+  {
+    "id": "cl_41_3_2_min_shear_for_torsion",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.3.2",
+    "page": 75,
+    "title": "Minimum shear reinforcement when τve ≤ τc",
+    "text": "When the equivalent nominal shear stress τve (computed from 41.3.1) does not exceed the design shear strength of concrete τc (from Table 19, indexed by 100·As/(b·d) and concrete grade), the section's combined shear-and-torsion demand is small enough that the concrete alone can carry it. In that case, only minimum shear reinforcement is required, per the detailing rule of clause 26.5.1.6. This mirrors the pure-shear case of 40.3, with τv replaced by τve. The minimum-reinforcement provision again provides ductility and crack-control rather than design shear capacity per se, and the longitudinal reinforcement is not augmented above what flexural design alone requires.",
+    "formula_nl_summary": "When τve ≤ τc (Table 19), provide minimum shear reinforcement per 26.5.1.6. Same rule structure as the pure-shear case 40.3 with τv replaced by τve. No separately designed transverse or longitudinal reinforcement required for torsion in this range.",
+    "tags": [
+      "shear",
+      "torsion",
+      "equivalent-shear",
+      "beam",
+      "stirrup",
+      "shear-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_3_1_equivalent_shear",
+      "cl_41_3_3_design_shear_for_torsion",
+      "table_19_design_shear_strength_concrete",
+      "cl_26_5_1_6_min_shear",
+      "cl_40_3_minimum_shear_reinforcement"
+    ]
+  },
+  {
+    "id": "cl_41_3_3_design_shear_for_torsion",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.3.3",
+    "page": 75,
+    "title": "Designed reinforcement when τve > τc — both longitudinal and transverse",
+    "text": "When the equivalent nominal shear stress τve exceeds the design shear strength of concrete τc (Table 19), the section's combined shear-and-torsion demand exceeds what the concrete alone can carry. In that case, BOTH longitudinal and transverse reinforcement must be designed per clause 41.4 — the longitudinal reinforcement per 41.4.2 (sized for the equivalent bending moment Me1 = Mu + Mt that augments the actual bending moment with a torsion contribution) and the transverse reinforcement per 41.4.3 (closed hoops sized for combined Tu and Vu effects, with a floor based on the surplus stress (τve − τc)). This contrasts with the pure-shear case of 40.4, where only transverse reinforcement (stirrups or bent-up bars) is designed; torsion uniquely requires longitudinal augmentation in addition to transverse, because the torsional shear flow demands a continuous tension chord on all four sides of the section.",
+    "formula_nl_summary": "When τve > τc (Table 19): provide BOTH longitudinal reinforcement (per 41.4.2, for equivalent moment Me1) and transverse reinforcement (per 41.4.3, two-legged closed hoops sized for combined Tu and Vu). Differs from pure-shear (40.4) in requiring longitudinal augmentation in addition to transverse — the defining feature of torsion design.",
+    "tags": [
+      "shear",
+      "torsion",
+      "equivalent-shear",
+      "beam",
+      "shear-reinforcement",
+      "longitudinal-reinforcement",
+      "transverse-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_3_1_equivalent_shear",
+      "cl_41_3_2_min_shear_for_torsion",
+      "cl_41_4_1_torsion_reinforcement_general",
+      "cl_41_4_2_torsion_longitudinal_reinforcement",
+      "cl_41_4_3_torsion_transverse_reinforcement",
+      "table_19_design_shear_strength_concrete"
+    ]
+  },
+  {
+    "id": "cl_41_4_1_torsion_reinforcement_general",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.4.1",
+    "page": 75,
+    "title": "Torsion reinforcement — composition",
+    "text": "Where torsion-induced reinforcement is required (i.e. where 41.3.3 has triggered, with τve > τc), the reinforcement consists of two distinct components designed in tandem: longitudinal reinforcement, sized per 41.4.2 to resist an equivalent bending moment Me1 = Mu + Mt that bundles the actual bending with a torsion contribution; and transverse reinforcement, sized per 41.4.3, taking the form of two-legged closed hoops enclosing the corner longitudinal bars, with the area Asv designed for combined torsional moment Tu and shear Vu and bounded below by a floor based on the surplus shear stress (τve − τc). Both components are mandatory when 41.3.3 triggers — neither alone is sufficient, because the torsional shear flow circulates around the entire perimeter of the section and demands closed-loop continuity in both axial and circumferential reinforcement.",
+    "formula_nl_summary": "When torsion reinforcement is required (per 41.3.3), it consists of two parts: longitudinal reinforcement (41.4.2, sized for Me1 = Mu + Mt) AND transverse reinforcement (41.4.3, two-legged closed hoops sized for combined Tu and Vu). Both required; neither alone is sufficient.",
+    "tags": [
+      "torsion",
+      "beam",
+      "longitudinal-reinforcement",
+      "transverse-reinforcement",
+      "closed-hoop",
+      "equivalent-moment"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_3_3_design_shear_for_torsion",
+      "cl_41_4_2_torsion_longitudinal_reinforcement",
+      "cl_41_4_3_torsion_transverse_reinforcement",
+      "cl_41_1_torsion_general"
+    ]
+  },
+  {
+    "id": "cl_41_4_2_torsion_longitudinal_reinforcement",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.4.2",
+    "page": 75,
+    "title": "Longitudinal reinforcement for torsion — equivalent bending moment Me1 (and Me2 for high-torsion case)",
+    "text": "The longitudinal reinforcement at a section subjected to combined bending and torsion is designed to resist an **equivalent bending moment** Me1 that bundles the actual bending moment with a torsion contribution: Me1 = Mu + Mt. Here Mu is the bending moment at the cross-section from analysis, and Mt is the torsion-equivalent bending moment Mt = Tu·(1 + D/b) / 1.7. Tu is the design torsional moment, D is the overall depth of the beam, and b is the breadth (use bw for flanged sections per 41.1.1). The 1.7 divisor and the (1 + D/b) shape factor convert the torsional moment into an equivalent bending action per the fictitious-action philosophy of 41.1. Conventional flexural design under the limit state of collapse is then carried out for Me1 — calculate the required longitudinal reinforcement using the assumptions of 38.1, with Mu replaced by Me1 throughout.\n\nClause 41.4.2.1 adds a second case for sections where torsion dominates over bending. If the magnitude of Mt exceeds the magnitude of Mu, additional longitudinal reinforcement must be provided on the **flexural compression face** of the beam to resist a second equivalent moment Me2 = Mt − Mu, taken as acting in the opposite sense to Mu. Physically, this captures the fact that under high torsion the section can experience reverse curvature: the face that would normally be in compression under pure bending is instead in tension under the dominant torsional component, and longitudinal steel is required there to resist tension cracking. The compression-face reinforcement is sized by treating the section as a flexural member resisting Me2, with the original tension face now playing the role of the compression face.",
+    "formula_nl_summary": "Longitudinal reinforcement for torsion: design for equivalent bending moment Me1 = Mu + Mt, where Mt = Tu·(1 + D/b)/1.7. If Mt > Mu (torsion dominates), additionally provide longitudinal reinforcement on the flexural compression face for Me2 = Mt − Mu, acting opposite to Mu — captures the reverse-curvature effect under high torsion. Use bw for flanged sections.",
+    "formula_latex": "M_{e1} = M_u + M_t, \\qquad M_t = \\frac{T_u\\,(1 + D/b)}{1.7}",
+    "tags": [
+      "torsion",
+      "beam",
+      "longitudinal-reinforcement",
+      "equivalent-moment",
+      "torsional-moment",
+      "flexure",
+      "compression-reinforcement"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_3_3_design_shear_for_torsion",
+      "cl_41_4_1_torsion_reinforcement_general",
+      "cl_41_4_3_torsion_transverse_reinforcement",
+      "cl_38_1_flexure_assumptions",
+      "cl_41_1_torsion_general"
+    ]
+  },
+  {
+    "id": "cl_41_4_3_torsion_transverse_reinforcement",
+    "content_type": "clause",
+    "code": "IS 456:2000",
+    "clause": "41.4.3",
+    "page": 75,
+    "title": "Transverse reinforcement for torsion — closed hoops with combined Tu+Vu sizing",
+    "text": "Transverse reinforcement at a section subjected to combined shear and torsion takes the form of **two-legged closed hoops enclosing the corner longitudinal bars** — closed hoops are required (rather than open stirrups) because the torsional shear flow circulates around the entire perimeter of the section and demands a continuous tension chord on all four sides. The required area of cross-section Asv per pair of legs at spacing sv is the sum of two contributions, one for torsion and one for shear:\n\nAsv = Tu·sv / (b1·d1·0.87·fy)  +  Vu·sv / (2.5·d1·0.87·fy)\n\nHere Tu is the design torsional moment; Vu is the design shear force at the section; sv is the spacing of the closed hoops along the member; b1 is the centre-to-centre distance between corner bars in the direction of the width; d1 is the centre-to-centre distance between corner bars in the depth direction; and the recurring 0.87·fy is the design yield stress of the hoop steel (with fy ≤ 415 N/mm² as for all shear and torsion reinforcement). The first term resolves the torsional shear flow into a tension demand on each pair of hoop legs (the b1·d1 product is the cross-sectional area of the closed-hoop circuit, by the thin-walled tube analogy); the second term resolves the conventional vertical shear into hoop tension, with the 2.5·d1 lever-arm reflecting the smaller depth available for the truss model when the corner-to-corner distance d1 is used in place of the effective depth d.\n\nThe sum above is the design Asv. However, regardless of the design value, the total transverse reinforcement must not be less than the floor (τve − τc)·b·sv / (0.87·fy), where the breadth in the floor formula is b (the full breadth of the member), not b1 — the notation distinction is deliberate. The floor is the area required to carry the surplus shear stress (τve − τc) over a strip of width b and length sv, by the same logic as the pure-shear formula of 40.4. The provided Asv is the maximum of the design value and the floor: Asv,provided = max(design, floor). Note that 41.3.1's cap τve ≤ τc,max from Table 20 still applies — if exceeded, this clause's reinforcement formulas cannot rescue the section and a redesign (larger section or higher concrete grade) is required.",
+    "formula_nl_summary": "Transverse reinforcement for combined shear and torsion: two-legged closed hoops enclosing the corner longitudinal bars. Asv per pair (at spacing sv) = Tu·sv/(b1·d1·0.87·fy) + Vu·sv/(2.5·d1·0.87·fy). Floor: Asv ≥ (τve − τc)·b·sv/(0.87·fy). Provided value is max(design, floor). b1 is corner-to-corner in width direction; d1 is corner-to-corner in depth direction; b is full member breadth (only in the floor formula); fy ≤ 415 N/mm². τve capped at τc,max (Table 20) — exceeding it requires redesign.",
+    "formula_latex": "A_{sv} = \\frac{T_u\\,s_v}{b_1\\,d_1\\,(0.87\\,f_y)} + \\frac{V_u\\,s_v}{2.5\\,d_1\\,(0.87\\,f_y)}, \\qquad A_{sv} \\geq \\frac{(\\tau_{ve} - \\tau_c)\\,b\\,s_v}{0.87\\,f_y}",
+    "tags": [
+      "torsion",
+      "beam",
+      "transverse-reinforcement",
+      "closed-hoop",
+      "torsional-moment",
+      "equivalent-shear",
+      "shear"
+    ],
+    "category": "rcc",
+    "status": "draft",
+    "see_also": [
+      "cl_41_3_1_equivalent_shear",
+      "cl_41_3_3_design_shear_for_torsion",
+      "cl_41_4_1_torsion_reinforcement_general",
+      "cl_41_4_2_torsion_longitudinal_reinforcement",
+      "table_19_design_shear_strength_concrete",
+      "table_20_max_shear_stress",
+      "cl_41_1_torsion_general"
+    ]
   }
 ]
